@@ -1,0 +1,9 @@
+{
+    "printWidth": 120,
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "trailingCommaPHP": true,
+    "singleQuote": true,
+    "semi": true,
+    "braceStyle": "1tbs"
+}

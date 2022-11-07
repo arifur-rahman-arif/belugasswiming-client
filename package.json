@@ -1,12 +1,17 @@
 {
   "name": "belugasswimming-client",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": "https://digitaltechnologia.com",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently 'next dev' 'yarn tailwind --watch'",
+    "tailwind": "tailwindcss -i src/styles/tailwind.css -o build/styles/tailwind.css",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "code-check": "npx eslint . --ext .ts --ext .tsx",
+    "format": "npx prettier --write \"**/*.+(html|css|scss|sass|less|js|jsx|ts|tsx|json|php)\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "18.11.9",
@@ -18,5 +23,16 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.8.4"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^7.5.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "sass": "^1.56.0",
+    "tailwindcss": "^3.2.2"
   }
 }
