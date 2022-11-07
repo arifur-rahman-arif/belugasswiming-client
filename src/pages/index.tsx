@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Section } from '../components/section';
 
 export default function Home() {
     return (
@@ -9,8 +10,20 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className="mt-4 bg-green">
-                <h1 className="w-full text-left">Hello there</h1>
+            <main className="mt-4">
+                <Section>
+                    <h1 className="w-full text-left">Hello there h1 tag</h1>
+                    <h2 className="w-full text-left">Hello there h2 tag</h2>
+                    <h3 className="w-full text-left">Hello there h3 tag</h3>
+                    <h4 className="w-full text-left">Hello there h4 tag</h4>
+                    <h5 className="w-full text-left">Hello there h5 tag</h5>
+                    <h6 className="w-full text-left">Hello there h6 tag</h6>
+                    <p className="mt-12">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, voluptate? Velit quis quo sequi
+                        quod aspernatur amet quia deleniti dolore dolores reprehenderit explicabo, doloremque, ullam
+                        totam consectetur <strong>maxime sit esse?</strong>
+                    </p>
+                </Section>
             </main>
         </div>
     );

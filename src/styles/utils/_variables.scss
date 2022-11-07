@@ -1,0 +1,16 @@
+:root {
+    // Utility variables
+    --container-width: 125rem;
+
+    // Color variables
+    --color-secondary: #3a3a3a;
+
+    // Typography variables
+    --font-lato-light: 'Lato-Light', arial, helvetica, sans-serif;
+    --font-lato-medium: 'Mulish-Medium', arial, helvetica, sans-serif;
+    --font-lato-bold: 'Lato-Bold', arial, helvetica, sans-serif;
+
+    // CSS property variables
+    --transition: 400ms cubic-bezier(0.17, 0.67, 0.78, 0.46);
+    --border-radius: 2.5rem;
+}
