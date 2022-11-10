@@ -9,7 +9,8 @@
         "sourceType": "module"
     },
     "ignorePatterns": ["*.d.ts", "babel.config.ts", "jest.config.ts"],
-    "plugins": ["@typescript-eslint"],
+    "plugins": ["@typescript-eslint", "tailwindcss"],
+    "parser": "@typescript-eslint/parser",
     "rules": {
         "quotes": [
             "error",
@@ -68,7 +69,11 @@
         "max-len": [
             "error",
             {
-                "code": 120
+                "code": 120,
+                "ignoreComments": true, //"comments": 80
+                "ignoreUrls": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
             }
         ],
         "object-curly-spacing": ["error", "always"],

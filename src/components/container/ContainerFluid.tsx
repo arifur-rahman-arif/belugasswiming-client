@@ -7,7 +7,7 @@ interface PropTypes {
  * Container with a full width
  *
  * @param {PropTypes} { children, className }
- * @return {*}  {JSX.Element}
+ * @returns {*}  {JSX.Element}
  */
 const ContainerFluid = ({ children, className }: PropTypes): JSX.Element => {
     return <div className={`${className} : relative mx-auto w-full`}>{children}</div>;

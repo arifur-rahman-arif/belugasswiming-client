@@ -1,16 +1,23 @@
+import { ReactNode } from 'react';
+
 interface PropTypes {
-    children: JSX.Element | JSX.Element[];
+    children: ReactNode;
     className?: string | null;
+    defaultClassName?: string | null;
 }
 
 /**
  * Container with a fixed max-width
  *
  * @param {PropTypes} { children, className }
- * @return {*}  {JSX.Element}
+ * @returns {*}  {JSX.Element}
  */
-const Container = ({ children, className }: PropTypes): JSX.Element => {
-    return <div className={`${className} : relative mx-auto w-full max-w-[var(--container-width)]`}>{children}</div>;
+const Container = ({
+    children,
+    className,
+    defaultClassName = 'relative mx-auto w-full max-w-[var(--container-width)] px-8'
+}: PropTypes): JSX.Element => {
+    return <div className={`${className} : ${defaultClassName}`}>{children}</div>;
 };
 
 export default Container;

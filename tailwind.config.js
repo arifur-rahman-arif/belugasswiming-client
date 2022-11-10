@@ -10,6 +10,7 @@ module.exports = {
       extend: {
         colors: {
           primary: '#FFE202',
+          headingColor: '#1E1E1E',
           secondary: '#3A3A3A',
           primary20: '#FFF9CC',
           blue: '#5FA1D5',
@@ -26,6 +27,14 @@ module.exports = {
           grey40: '#CBCBD4',
           grey20: '#F8F7FA',
         },
+        fontFamily: {
+          light: "'Lato-Light', arial, helvetica, sans-serif",
+          medium: "'Lato-Medium', arial, helvetica, sans-serif",
+          bold: "'Lato-Bold', arial, helvetica, sans-serif"
+        },
+        borderRadius: {
+          primary: '2.5rem'
+        }
       }
   },
   plugins: []
