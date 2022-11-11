@@ -20,8 +20,8 @@ const Header = (): JSX.Element => {
     };
 
     return (
-        <header className="sticky top-0 z-50 mx-auto w-full max-w-[var(--container-width)] bg-white">
-            <div className="relative grid h-[10rem] w-full grid-cols-[1fr_auto] items-center justify-items-start px-8 md:h-auto md:px-0 xl:grid-cols-2">
+        <header className="sticky top-0 z-50 mx-auto w-full max-w-[var(--container-width)] bg-white md:bg-transparent">
+            <div className="relative grid h-[10rem] w-full grid-cols-[1fr_auto] items-center justify-items-start px-8 md:h-auto xl:grid-cols-2 xl:px-0">
                 <div className="grid place-items-center md:mt-[4.8rem]">
                     <img className="h-[8.2rem] w-[16rem] object-contain" src="/images/logos/logo.svg" alt="" />
                 </div>

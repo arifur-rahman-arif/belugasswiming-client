@@ -15,9 +15,9 @@ interface PropTypes {
 const Container = ({
     children,
     className,
-    defaultClassName = 'relative mx-auto w-full max-w-[var(--container-width)] px-8'
+    defaultClassName = 'mx-auto w-full max-w-[var(--container-width)] px-8 xl:px-0'
 }: PropTypes): JSX.Element => {
-    return <div className={`${className} : ${defaultClassName}`}>{children}</div>;
+    return <div className={`${className} ${defaultClassName}`}>{children}</div>;
 };
 
 export default Container;

@@ -6,7 +6,7 @@ import { MastHead } from '../components/masthead';
  * @export
  * @returns {*}
  */
-export default function Home() {
+export default function Home(): any {
     return (
         <>
             <MastHead />
