@@ -21,9 +21,9 @@ const Hamburger = ({ hamburgerActive, toggleMenu }: PropInterface) => {
                 (hamburgerActive && styles.hamburgerActive) || ''
             } flex w-[3.5rem] cursor-pointer flex-col gap-[0.5rem] justify-self-end transition-all duration-500 md:hidden`}
         >
-            <span className="h-[0.5rem] w-full rounded-primary bg-secondary transition-all duration-500"></span>
-            <span className="h-[0.5rem] w-full rounded-primary bg-secondary transition-all duration-500"></span>
-            <span className="h-[0.5rem] w-full rounded-primary bg-secondary transition-all duration-500"></span>
+            <span className="h-[0.4rem] w-full rounded-primary bg-secondary transition-all duration-500"></span>
+            <span className="h-[0.4rem] w-full rounded-primary bg-secondary transition-all duration-500"></span>
+            <span className="h-[0.4rem] w-full rounded-primary bg-secondary transition-all duration-500"></span>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 .hamburgerActive {
     & > span:first-child {
-        transform: rotate(45deg) translate(1rem, 0.4rem);
+        transform: rotate(45deg) translate(1rem, 0.25rem);
     }
 
     & > span:nth-child(2) {
@@ -9,6 +9,6 @@
     }
 
     & > span:last-child {
-        transform: rotate(-45deg) translate(1rem, -0.4rem);
+        transform: rotate(-45deg) translate(1rem, -0.25rem);
     }
 }

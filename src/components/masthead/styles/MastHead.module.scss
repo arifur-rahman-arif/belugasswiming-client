@@ -1,0 +1,24 @@
+.masthead {
+    & > div {
+        transform-style: preserve-3d;
+        transition: transform 1500ms, box-shadow 1500ms;
+    }
+
+    & > div:first-child {
+        transform-origin: left center;
+    }
+
+    & > div:last-child {
+        transform-origin: right center;
+    }
+}
+
+.mastheadOpen {
+    & > div:first-child {
+        transform: perspective(1200px) rotateY(105deg);
+    }
+
+    & > div:last-child {
+        transform: perspective(1200px) rotateY(-105deg);
+    }
+}

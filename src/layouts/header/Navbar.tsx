@@ -10,9 +10,9 @@ interface PropInterface {
  * Navbar component
  *
  * @param {PropInterface} { hamburgerActive }
- * @returns {*}
+ * @returns {JSX.Element}
  */
-const Navbar = ({ hamburgerActive }: PropInterface) => {
+const Navbar = ({ hamburgerActive }: PropInterface): JSX.Element => {
     return (
         <nav className={`absolute top-[10rem] left-0 z-50 h-full w-full md:relative md:top-0 md:block`}>
             <div
@@ -20,32 +20,32 @@ const Navbar = ({ hamburgerActive }: PropInterface) => {
                     (hamburgerActive && 'max-h-[100rem] pb-8 md:pb-0') || ''
                 }`}
             >
-                <ul className="flex h-full w-full flex-col items-center justify-center gap-12 bg-white py-16 px-8 shadow-lg md:flex-row md:bg-transparent md:py-0 md:shadow-none">
+                <ul className="flex h-full w-full flex-col items-center justify-center gap-12 bg-white py-16 shadow-lg md:flex-row md:justify-end md:bg-transparent md:py-0 md:shadow-none">
                     <li className="grid w-full cursor-pointer place-items-center md:w-auto">
                         <Link href="/" className="mx-auto md:-translate-y-1">
                             <HomeIcon className="fill-secondary xl:fill-none" />
                         </Link>
                     </li>
-                    <li className="w-full cursor-pointer whitespace-nowrap text-center transition-all hover:underline hover:decoration-secondary hover:underline-offset-8 md:w-auto xl:hover:decoration-white">
+                    <li className="w-full cursor-pointer whitespace-nowrap text-center transition-all hover:underline hover:decoration-secondary hover:underline-offset-8 md:w-auto hover:md:decoration-primary xl:hover:decoration-white">
                         <Link
                             href="#"
-                            className="inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary xl:text-white"
+                            className={`inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary md:text-primary xl:text-white`}
                         >
                             Who we are
                         </Link>
                     </li>
-                    <li className="w-full cursor-pointer whitespace-nowrap text-center transition-all hover:underline hover:decoration-secondary hover:underline-offset-8 md:w-auto xl:hover:decoration-white">
+                    <li className="w-full cursor-pointer whitespace-nowrap text-center transition-all hover:underline hover:decoration-secondary hover:underline-offset-8 md:w-auto hover:md:decoration-primary xl:hover:decoration-white">
                         <Link
                             href="#"
-                            className="inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary xl:text-white"
+                            className={`inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary md:text-primary xl:text-white`}
                         >
                             Contact us
                         </Link>
                     </li>
-                    <li className="w-full cursor-pointer whitespace-nowrap text-center transition-all hover:underline hover:decoration-secondary hover:underline-offset-8 md:w-auto xl:hover:decoration-white">
+                    <li className="w-full cursor-pointer whitespace-nowrap text-center transition-all hover:underline hover:decoration-secondary hover:underline-offset-8 md:w-auto hover:md:decoration-primary xl:hover:decoration-white">
                         <Link
                             href="#"
-                            className="inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary xl:text-white"
+                            className={`inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary md:text-primary xl:text-white`}
                         >
                             Pricing
                         </Link>

@@ -17,7 +17,7 @@ const Container = ({
     className,
     defaultClassName = 'mx-auto w-full max-w-[var(--container-width)] px-8 xl:px-0'
 }: PropTypes): JSX.Element => {
-    return <div className={`${className} ${defaultClassName}`}>{children}</div>;
+    return <div className={`${defaultClassName || ''} ${className || ''}`}>{children}</div>;
 };
 
 export default Container;
