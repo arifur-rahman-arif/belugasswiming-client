@@ -10,8 +10,11 @@ composer.json
 composer.lock
 yarn.lock
 *.md
-node_modules/**
-assets/**
-build/**
-vendor/**
+node_modules
+assets
+build
+vendor
+out
+shell-scripts
+public
 .next
