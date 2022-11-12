@@ -3,6 +3,7 @@
 *.config.*
 *.sh
 *.conf
+*.d.ts
 Dockerfile*
 package.json
 composer.json
@@ -13,3 +14,4 @@ node_modules/**
 assets/**
 build/**
 vendor/**
+.next
