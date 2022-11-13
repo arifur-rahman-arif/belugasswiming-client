@@ -1,9 +1,6 @@
-import { useState, MouseEvent, useRef, useEffect, useContext } from 'react';
+import { useState, MouseEvent, useRef, useEffect } from 'react';
 import Hamburger from './hamburger/Hamburger';
 import Navbar from './Navbar';
-import { gsap } from 'gsap';
-import { AppContextInterface, AppCtx } from '../../context/Context';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 /**
  * Header layout
@@ -11,26 +8,23 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
  * @returns {JSX.Element}
  */
 const Header = (): JSX.Element => {
-    const appCtx: AppContextInterface | null = useContext(AppCtx);
     const header = useRef<HTMLElement>(null);
     const [hamburgerActive, setHamburgerActive] = useState<boolean>(false);
+    const [stickyNavActive, setStickyNavActive] = useState<boolean>(false);
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
-        }
-        // If (!appCtx?.homePageDoorOpen) return;
+        const mastheadSection = document.querySelector('.masthead');
 
-        gsap.to(header.current, {
-            scrollTrigger: {
-                trigger: '.masthead',
-                toggleActions: 'play',
-                markers: true
+        window.addEventListener('scroll', () => {
+            const clientRect = mastheadSection?.getBoundingClientRect();
+
+            if (clientRect !== undefined && clientRect.top * -1 > clientRect.height) {
+                setStickyNavActive(true);
+            } else {
+                setStickyNavActive(false);
             }
-            // Markers: true,
-            // y: 500
         });
-    }, [appCtx?.homePageDoorOpen]);
+    }, []);
 
     /**
      * Toggle the state of the hamburger menu
@@ -44,18 +38,25 @@ const Header = (): JSX.Element => {
     return (
         <header
             ref={header}
-            className="sticky top-0 left-0 z-50 mx-auto w-full max-w-[var(--container-width)] bg-white md:relative md:bg-transparent"
+            className={`sticky top-0 left-0 z-50 mx-auto w-full bg-white shadow-md ${
+                (stickyNavActive && 'md:sticky md:bg-white md:shadow-md') ||
+                'max-w-[var(--container-width)] md:relative md:bg-transparent md:shadow-none'
+            }`}
         >
-            <div className="relative grid h-[10rem] w-full grid-cols-[1fr_auto] items-center justify-items-start px-8 md:h-auto xl:grid-cols-2 xl:px-0">
-                <div className="grid place-items-center md:mt-[4.8rem]">
+            <div
+                className={`relative grid h-[9rem] w-full grid-cols-[1fr_auto] items-center justify-items-start px-8  md:h-auto xl:grid-cols-2 xl:px-0 ${
+                    (stickyNavActive && 'md:mx-auto md:max-w-[var(--container-width)]') || ''
+                }`}
+            >
+                <div className={`${(stickyNavActive && 'md:mt-0') || 'md:mt-[4.8rem]'} grid place-items-center`}>
                     <img
-                        className="w-[12rem] object-contain md:h-[8.2rem] md:w-[16rem]"
+                        className={`w-[12rem] object-contain md:h-[8.2rem] md:w-[16rem]`}
                         src="/images/logos/logo.svg"
                         alt=""
                     />
                 </div>
 
-                <Navbar hamburgerActive={hamburgerActive} />
+                <Navbar hamburgerActive={hamburgerActive} stickyNavActive={stickyNavActive} />
 
                 <Hamburger hamburgerActive={hamburgerActive} toggleMenu={toggleMenu} />
             </div>
