@@ -32,7 +32,7 @@ const MastHead = (): JSX.Element => {
     return (
         <>
             <div
-                className={`absolute left-0 top-0 z-10 grid h-screen w-full overflow-hidden md:grid-cols-2 ${
+                className={`absolute left-0 top-0 z-20 grid h-screen w-full overflow-hidden md:grid-cols-2 ${
                     styles.masthead
                 } ${(appCtx?.homePageDoorOpen && styles.mastheadOpen) || ''} ${
                     appCtx?.homePageDoorOpen && 'pointer-events-none'
