@@ -1,5 +1,5 @@
 import { MastHead } from '@/components/masthead';
-import { LearnFromBest, PrivateSwiming } from '@/components/page-sections/home';
+import { LearnFromBest, MehdiSection, PrivateSwiming } from '@/components/page-sections/home';
 
 /**
  * Home/Landing page component for the App
@@ -13,6 +13,16 @@ export default function Home(): JSX.Element {
             <MastHead />
             <PrivateSwiming />
             <LearnFromBest />
+            <MehdiSection />
+            <h1>Helar</h1>
+            <h1>Helar</h1>
+            <h1>Helar</h1>
+            <h1>Helar</h1>
+            <h1>Helar</h1>
+            <h1>Helar</h1>
+            <h1>Helar</h1>
+            <h1>Helar</h1>
+            <h1>Helar</h1>
         </>
     );
 }

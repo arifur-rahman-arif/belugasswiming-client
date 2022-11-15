@@ -66,7 +66,7 @@ const PrivateSwiming = () => {
 
                 <div className="flex items-start justify-start">
                     <span ref={yellowElement} className="h-0 w-[0.8rem] bg-primary"></span>
-                    <div className="relative overflow-hidden">
+                    <div className="relative">
                         <img
                             src="/images/section-images/person-swiming.png"
                             className="xl:min-h-[42.6rem]"

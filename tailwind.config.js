@@ -34,6 +34,9 @@ module.exports = {
         },
         borderRadius: {
           primary: '2.5rem'
+        },
+        boxShadow: {
+          'shadow1': '0.4rem 0.4rem 2.4rem rgba(142, 142, 142, 0.25)',
         }
       }
   },
