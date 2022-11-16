@@ -47,7 +47,7 @@ const LearnFromBest = () => {
     return (
         <Section>
             <Container className="grid grid-flow-dense grid-cols-1 gap-8 md:grid-cols-2 md:items-start">
-                <div className="justify-self-end md:col-start-2">
+                <div className="md:col-start-2 md:justify-self-end">
                     <SwimmingIcon className="max-h-[3.7rem] max-w-[5.1rem]" />
                     <h2 className="mt-12 max-w-[38.8rem]">Learn From the best</h2>
                     <h3 className="mt-4 text-teal">Experienced swimming instructors</h3>

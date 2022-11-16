@@ -1,19 +1,19 @@
+import { ContainerFluid } from '@/components/container';
 import { Section } from '@/components/section';
-import { useContext, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
 import { AppContextInterface, AppCtx } from '@/context/Context';
+import { useContext, useRef, useEffect } from 'react';
 import SunGlass from '@/images/icons/icon-sunglass-black.svg';
 import IconLinkedin from '@/images/icons/icon-linkedin-outline.svg';
 import IconFacebook from '@/images/icons/icon-facebook-outline.svg';
 import IconInstagram from '@/images/icons/icon-instagram-outline.svg';
-import { ContainerFluid } from '@/components/container';
+import { gsap } from 'gsap';
 
 /**
- * Mahdi section right sided component
+ * Jhon section component
  *
  * @returns {*}  {JSX.Element}
  */
-const MehdiSection = (): JSX.Element => {
+const JhonSection = (): JSX.Element => {
     const appCtx: AppContextInterface | null = useContext(AppCtx);
     const yellowElement = useRef<HTMLDivElement>(null);
     const yellowHorizontalElement = useRef<HTMLDivElement>(null);
@@ -68,49 +68,55 @@ const MehdiSection = (): JSX.Element => {
     }, [appCtx?.homePageDoorOpen]);
 
     return (
-        <Section className="md:mt-[20rem]">
-            <ContainerFluid className="relative grid grid-cols-1 gap-20 px-0 pb-12 shadow-shadow1 md:grid-cols-2 md:gap-0">
-                <div className="ml-auto w-full px-8 md:mt-[4.6rem] md:max-w-[calc(var(--container-width)_/_2)] xl:px-0">
-                    <h2 className="max-w-[38.8rem]">Mehdi</h2>
-                    <h3 className="mt-4 text-teal">I love myself more in the water</h3>
+        <Section className="md:mt-[29.3rem]">
+            <ContainerFluid className="relative grid grid-flow-dense grid-cols-1 gap-20 px-0 pb-12 shadow-shadow1 md:grid-cols-2 md:gap-0">
+                <div className="w-full px-8 md:col-start-2 md:mt-[4.6rem] md:max-w-[calc(var(--container-width)_/_2)] md:pl-8 lg:pl-16 xl:pl-[12rem]">
+                    <h2 className="max-w-[38.8rem]">John</h2>
+                    <h3 className="mt-4 text-teal">It’s your time to swim</h3>
 
                     <div className="mt-12 flex w-full max-w-[45rem] flex-col gap-[1.5rem]">
                         <p className="text-secondary">
-                            Mehdi is a former member of the Iranian waterpolo national team. He began swimming at the
-                            age of seven and competed in the swimming national league at the age of eleven.
+                            John initially learnt to swim as a means of tackling the effects of childhood asthma. He
+                            then went on to win his categories in several Rio de Janeiro State Swimming Championships.
                         </p>
                         <p className="text-secondary">
-                            Mehdi began teaching swimming at a private club in 1993 and coaching in 1998.
+                            John has not stopped swimming since and is now one of SwimRight’s most talented teachers.
+                            Originally from Brazil he has also lived in Holland before coming to England. He has been
+                            teaching in England since 2008 and holds a level 2 Certificate from STA governing body.
                         </p>
                         <p className="text-secondary">
-                            Throughout his 29 years of teaching and high-level Olympic coaching, he has never stopped
-                            teaching and coaching techniques that have earned him the title of master SWIMRIGHT'S
-                            talented teacher.
+                            John is a great advocate of a healthy lifestyle and when not in the pool he can be found
+                            running or in the gym! His sporting highlight was when he finished 3rd in his age group at
+                            the Astana 70.3 Ironman in 2019.
                         </p>
                         <p className="text-secondary">
-                            In 2005-2007, he was invited to play for the Polytechnic London team in the UK national
-                            league and the Ealing club in the London league. During this time, Mehdi worked as a
-                            swimming coach for the Ealing Club and as a fitness instructor for Virgin Active.
+                            He had also a good result finishing 5th at Bahrain 70.3 Ironman Middle-East Championship in
+                            2016.
                         </p>
                         <p className="text-secondary">
-                            Mehdi moved to Dubai in 2007 and founded the Dubai Waterpolo and Swimming Club with his
-                            European friends. Mehdi returned to the UK in 2018 and began teaching private lessons to
-                            members of the Royal Family and other high-ranking officials.
+                            He is currently training for qualifying for the World Championship event. Clearly wanting to
+                            keep challenging himself and reaching for ever greater achievements, it is no surprise that
+                            John finds the most enjoyable feeling when his student has joined a squad to be the
+                            highlight of his job, especially when he is able to think back to their first lesson -
+                            blowing bubbles!
                         </p>
                         <p className="text-secondary">
-                            Mehdi is excited to share his 29 years of experience with children of all ages to help them
-                            improve their lifestyle on SWIMRIGHT.
+                            John values the ability to tailor the lessons to the pupil whether an adult or a child and
+                            offers bespoke tuition enabling anyone to reach each individual’s goal. He always keep
+                            himself updated with the latest news of the world of swimming. From the fastest way to
+                            tumble turn to the new World Record.
                         </p>
                     </div>
                 </div>
+
                 <div
                     ref={yellowTriggerElement}
-                    className="row-start-1 grid bg-grey20 px-8 pt-12 md:absolute md:right-0 md:top-0 md:h-[calc(100%_+_calc(8.7rem_*_2))] md:w-2/4 md:-translate-y-[8.7rem] md:pt-0 xl:px-0"
+                    className="row-start-1 grid bg-grey20 px-8 pt-12 md:absolute md:left-0 md:top-0 md:h-[calc(100%_+_calc(8.7rem_*_2))] md:w-2/4 md:-translate-y-[8.7rem] md:pt-0 xl:px-0"
                 >
-                    <div className="relative grid grid-cols-1 items-start gap-12 md:max-w-[calc(var(--container-width)_/_2)] md:gap-0 md:pb-[8.7rem] md:pt-[19.2rem]">
+                    <div className="relative grid w-full grid-cols-1 items-start gap-12 md:ml-auto md:max-w-[calc(var(--container-width)_/_2)] md:gap-0 md:pt-[19.2rem] md:pb-[8.7rem]">
                         <span
                             ref={yellowElement}
-                            className="absolute top-0 left-0 z-[2] hidden h-0 w-[0.8rem] bg-primary md:block"
+                            className="absolute top-0 right-0 z-[2] hidden h-0 w-[0.8rem] bg-primary md:block"
                         ></span>
 
                         <span
@@ -118,33 +124,33 @@ const MehdiSection = (): JSX.Element => {
                             className="absolute top-0 z-[2] h-[0.8rem] w-0 -translate-y-[calc(3rem_+_0.8rem)] -translate-x-8 bg-primary md:right-0 md:hidden"
                         ></span>
 
-                        <div className="grid grid-cols-1 items-start gap-[2.5rem] md:ml-20 md:self-end xl:ml-[11.1rem] xl:self-start">
+                        <div className="grid grid-cols-1 items-start gap-[2.5rem] md:ml-0 md:self-end xl:self-start">
                             <div className="flex items-center justify-start gap-[1.5rem]">
                                 <SunGlass className="max-h-[2.4rem] max-w-[4.23rem]" />
                                 <p className="max-w-[22.5rem] text-left font-bold">
-                                    Former member of the Iranian waterpolo team
+                                    SwimRight’s most talented teachers
                                 </p>
                             </div>
                             <div className="flex items-center justify-start gap-[1.5rem]">
                                 <SunGlass className="max-h-[2.4rem] max-w-[4.23rem]" />
                                 <p className="max-w-[22.5rem] text-left font-bold">
-                                    Master SWIMRIGHT'S talented teacher
+                                    Leven 2 swimming teacher certification
                                 </p>
                             </div>
                             <div className="flex items-center justify-start gap-[1.5rem]">
                                 <SunGlass className="max-h-[2.4rem] max-w-[4.23rem]" />
                                 <p className="max-w-[22.5rem] text-left font-bold">
-                                    Former Dubai Waterpolo and Swimming Club fouder
+                                    3rd place holder, Astana 70.3 Ironman in 2019
                                 </p>
                             </div>
                         </div>
 
-                        <div className="relative max-h-[52.7rem] max-w-[58.8rem] self-end md:ml-16 xl:ml-[7.5rem]">
-                            <img src="/images/section-images/mehdi.png" className="relative z-[2]" ref={imgElement} />
+                        <div className="relative max-h-[52.7rem] max-w-[58.8rem] self-end md:mr-16 xl:mr-[7.5rem]">
+                            <img src="/images/section-images/jhon.png" className="relative z-[2]" ref={imgElement} />
                             <span
                                 ref={sportElement}
                                 style={{ writingMode: 'sideways-lr', WebkitTextStroke: '1px #000' }}
-                                className="absolute top-0 left-0 z-[1] h-full w-0 overflow-hidden text-right text-[calc(2vmax_+_3rem)] font-bold capitalize leading-[5rem] text-transparent sm:leading-[6.5rem] lg:text-[8rem] lg:leading-[9.6rem]"
+                                className="absolute top-0 left-0 z-[1] h-full w-0 overflow-hidden text-right text-[calc(2vmax_+_3rem)] font-bold capitalize leading-[5rem] text-transparent sm:leading-[6.5rem] lg:text-[8rem] lg:leading-[7rem]"
                             >
                                 Splash on
                             </span>
@@ -170,4 +176,4 @@ const MehdiSection = (): JSX.Element => {
     );
 };
 
-export default MehdiSection;
+export default JhonSection;
