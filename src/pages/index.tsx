@@ -4,7 +4,8 @@ import {
     LearnFromBest,
     LocationSection,
     MehdiSection,
-    PrivateSwiming
+    PrivateSwiming,
+    Terms
 } from '@/components/page-sections/home';
 
 /**
@@ -22,6 +23,12 @@ export default function Home(): JSX.Element {
             <MehdiSection />
             <JhonSection />
             <LocationSection />
+            <Terms />
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
         </>
     );
 }
