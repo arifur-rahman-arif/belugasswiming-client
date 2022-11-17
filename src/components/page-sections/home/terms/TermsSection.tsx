@@ -11,20 +11,13 @@ import TermsSlider from './TermsSlider';
  *
  * @returns {*}
  */
-const Terms = () => {
+const TermsSection = () => {
     const appCtx: AppContextInterface | null = useContext(AppCtx);
     const yellowElement = useRef<HTMLDivElement>(null);
     const imageElement = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (!appCtx?.homePageDoorOpen) return;
-
-        // Const sectionTimeline = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: imgElement.current,
-        //         start: 'top 85%'
-        //     }
-        // });
 
         gsap.to(yellowElement.current, {
             height: '15rem',
@@ -35,28 +28,18 @@ const Terms = () => {
                 start: 'top 85%'
             }
         });
-
-        // Gsap.to(yellowHorizontalElement.current, {
-        //     width: '8.7rem',
-        //     duration: 1.5,
-        //     ease: 'steps(12)',
-        //     scrollTrigger: {
-        //         trigger: yellowTriggerElement.current,
-        //         start: 'top 85%'
-        //     }
-        // });
     }, [appCtx?.homePageDoorOpen]);
 
     return (
         <Section>
-            <Container className="grid grid-cols-1 md:grid-cols-2 md:gap-y-12">
+            <Container className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-y-12">
                 <div className="col-span-2 col-start-1">
                     <SwimmingIcon className="max-h-[3.7rem] max-w-[5.1rem]" />
                     <h2 className="mt-12">Classes and Terms</h2>
                     <h3 className="mt-4 text-teal">All Age and levels swimming lessons</h3>
                 </div>
 
-                <div className="flex items-start justify-start">
+                <div className="col-span-2 flex items-start justify-start md:col-span-1">
                     <span ref={yellowElement} className="h-[0] w-[0.8rem] bg-primary"></span>
                     <div ref={imageElement} className="relative w-full overflow-hidden">
                         <img
@@ -73,4 +56,4 @@ const Terms = () => {
     );
 };
 
-export default Terms;
+export default TermsSection;

@@ -216,7 +216,11 @@ body {
     // ========================
     p,
     b,
-    strong {
+    strong,
+    span,
+    label,
+    input,
+    textarea {
         &,
         * {
             font-size: 1.6rem;

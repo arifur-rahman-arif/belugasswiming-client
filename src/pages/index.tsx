@@ -1,12 +1,14 @@
 import { MastHead } from '@/components/masthead';
 import {
-    JhonSection,
-    LearnFromBest,
-    LocationSection,
-    MehdiSection,
     PrivateSwiming,
-    Terms
-} from '@/components/page-sections/home';
+    LearnFromBest,
+    MehdiSection,
+    JhonSection,
+    LocationSection,
+    TermsSection,
+    OurClientsSection,
+    FormSection
+} from '@/page-sections/home';
 
 /**
  * Home/Landing page component for the App
@@ -23,12 +25,9 @@ export default function Home(): JSX.Element {
             <MehdiSection />
             <JhonSection />
             <LocationSection />
-            <Terms />
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
+            <TermsSection />
+            <OurClientsSection />
+            <FormSection />
         </>
     );
 }

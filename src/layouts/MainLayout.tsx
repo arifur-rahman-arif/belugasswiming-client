@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import Header from './header/Header';
 
 import { NextSeo } from 'next-seo';
+import { Footer } from 'src/layouts/footer';
 
 interface PropTypes {
     children: ReactNode;
@@ -28,6 +29,7 @@ const MainLayout = ({ children }: PropTypes): JSX.Element => {
             />
             <Header />
             {children}
+            <Footer />
         </>
     );
 };

@@ -43,6 +43,9 @@
 			],
 			"@/context/*": [
 				"src/context/*"
+			],
+			"@/page-sections/*": [
+				"src/components/page-sections/*"
 			]
 		}
   },
