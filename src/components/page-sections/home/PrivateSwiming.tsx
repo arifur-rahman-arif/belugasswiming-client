@@ -47,7 +47,7 @@ const PrivateSwiming = () => {
                     <h2 className="mt-12">PRIVATE SWIMMING LESSONS</h2>
                     <h3 className="mt-4 text-teal">Learn to swim at your leisure.</h3>
 
-                    <div className="mt-12 flex w-full max-w-[45rem] flex-col gap-[1.5rem]">
+                    <div className="mt-12 flex w-full flex-col gap-[1.5rem] md:max-w-[45rem]">
                         <p className="text-secondary">
                             Adults and children alike benefit from private swim lessons to improve their skills and
                             comfort in the water.
@@ -74,8 +74,8 @@ const PrivateSwiming = () => {
                         />
                         <span
                             ref={sportElement}
-                            style={{ writingMode: 'sideways-lr', WebkitTextStroke: '1px #fff' }}
-                            className="absolute top-0 left-0 z-[1] h-full w-0 overflow-hidden text-center text-[calc(2vmax_+_1rem)] capitalize leading-[4rem] text-transparent md:text-[4rem] md:leading-[7rem]"
+                            style={{ writingMode: 'vertical-lr', WebkitTextStroke: '1px #fff' }}
+                            className="absolute top-0 left-0 z-[1] h-full w-0 rotate-180 overflow-hidden text-center text-[calc(2vmax_+_1rem)] capitalize leading-[4rem] text-transparent md:text-[4rem] md:leading-[7rem]"
                         >
                             More than a sport
                         </span>

@@ -74,7 +74,7 @@ const MehdiSection = (): JSX.Element => {
                     <h2 className="max-w-[38.8rem]">Mehdi</h2>
                     <h3 className="mt-4 text-teal">I love myself more in the water</h3>
 
-                    <div className="mt-12 flex w-full max-w-[45rem] flex-col gap-[1.5rem]">
+                    <div className="mt-12 flex w-full flex-col gap-[1.5rem] md:max-w-[45rem]">
                         <p className="text-secondary">
                             Mehdi is a former member of the Iranian waterpolo national team. He began swimming at the
                             age of seven and competed in the swimming national league at the age of eleven.
@@ -143,8 +143,8 @@ const MehdiSection = (): JSX.Element => {
                             <img src="/images/section-images/mehdi.png" className="relative z-[2]" ref={imgElement} />
                             <span
                                 ref={sportElement}
-                                style={{ writingMode: 'sideways-lr', WebkitTextStroke: '1px #000' }}
-                                className="absolute top-0 left-0 z-[1] h-full w-0 overflow-hidden text-right text-[calc(2vmax_+_3rem)] font-bold capitalize leading-[5rem] text-transparent sm:leading-[6.5rem] lg:text-[8rem] lg:leading-[9.6rem]"
+                                style={{ writingMode: 'vertical-lr', WebkitTextStroke: '1px #000' }}
+                                className="absolute top-0 left-0 z-[1] h-full w-0 rotate-180 overflow-hidden text-right text-[calc(2vmax_+_3rem)] font-bold capitalize leading-[5rem] text-transparent sm:leading-[6.5rem] lg:text-[8rem] lg:leading-[9.6rem]"
                             >
                                 Splash on
                             </span>

@@ -4,7 +4,7 @@ import { AppContextInterface, AppCtx } from '@/context/Context';
 import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
 import { useContext, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-
+import IconVideoPlay from '@/images/icons/video-play.svg';
 /**
  * Learn from best component
  *
@@ -52,7 +52,7 @@ const LearnFromBest = () => {
                     <h2 className="mt-12 max-w-[38.8rem]">Learn From the best</h2>
                     <h3 className="mt-4 text-teal">Experienced swimming instructors</h3>
 
-                    <div className="mt-12 flex w-full max-w-[45rem] flex-col gap-[1.5rem]">
+                    <div className="mt-12 flex w-full flex-col gap-[1.5rem] md:max-w-[45rem]">
                         <p className="text-secondary">
                             We are a small group of world-class swimmers with more than 25 years of teaching experience.
                         </p>
@@ -67,11 +67,16 @@ const LearnFromBest = () => {
                 <div className="flex flex-row-reverse items-start justify-start">
                     <span ref={yellowElement} className="h-0 w-[0.8rem] bg-primary"></span>
                     <div className="relative overflow-hidden">
-                        <img
-                            src="/images/section-images/person-swimming-2.png"
-                            className="xl:min-h-[42.6rem]"
-                            ref={imgElement}
-                        />
+                        <div className="relative">
+                            <img
+                                src="/images/section-images/person-swimming-2.png"
+                                className="xl:min-h-[42.6rem]"
+                                ref={imgElement}
+                            />
+                            <span className="absolute right-[12.9rem] bottom-[4.3rem] z-[2] grid h-[6.5rem] w-[6.5rem] cursor-pointer place-items-center rounded-full bg-primary">
+                                <IconVideoPlay className="translate-x-[0.2rem]" />
+                            </span>
+                        </div>
                         <span
                             ref={spanElement}
                             className="relative -z-[1] mt-[1.5rem] block -translate-y-[200%] text-left text-[2.4rem] uppercase leading-[2.88rem] text-headingColor opacity-0"

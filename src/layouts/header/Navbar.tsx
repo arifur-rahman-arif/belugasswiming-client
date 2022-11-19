@@ -81,7 +81,7 @@ const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Elemen
                         <Link href="#" className="">
                             <button
                                 type="button"
-                                className={`cursor-pointer rounded-[1.5rem] border-2 border-primary bg-primary py-[1.8rem] px-[2.4rem] text-[1.6rem] font-medium uppercase leading-8 text-secondary transition-all hover:bg-transparent ${
+                                className={`cursor-pointer rounded-[1.5rem] border-2 border-primary bg-primary py-[1.8rem] px-[2.4rem] text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-transparent ${
                                     (stickyNavActive && 'md:hover:text-secondary') || 'md:hover:text-primary'
                                 }`}
                             >
