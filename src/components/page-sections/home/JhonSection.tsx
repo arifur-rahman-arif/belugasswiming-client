@@ -28,7 +28,7 @@ const JhonSection = (): JSX.Element => {
         const sectionTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: imgElement.current,
-                start: 'top 85%'
+                start: 'top 75%'
                 // Markers: true
             }
         });
@@ -39,7 +39,7 @@ const JhonSection = (): JSX.Element => {
             ease: 'steps(12)',
             scrollTrigger: {
                 trigger: yellowTriggerElement.current,
-                start: 'top 85%'
+                start: 'top 75%'
             }
         });
 
@@ -49,7 +49,7 @@ const JhonSection = (): JSX.Element => {
             ease: 'steps(12)',
             scrollTrigger: {
                 trigger: yellowTriggerElement.current,
-                start: 'top 85%'
+                start: 'top 75%'
             }
         });
 

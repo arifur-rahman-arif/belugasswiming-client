@@ -33,6 +33,9 @@
 body {
     font-size: 1.6rem;
     width: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
+    position: relative;
     background-color: #ffffff;
     // background-color: #a291d7d1;
 

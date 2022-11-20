@@ -1,5 +1,4 @@
 import Link from 'next/link';
-
 import HomeIcon from '@/images/icons/icon-home-white-outline.svg';
 
 interface PropInterface {

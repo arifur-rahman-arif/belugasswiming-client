@@ -1,19 +1,18 @@
 import { Container } from '@/components/container';
 import { Section } from '@/components/section';
 import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
-import { MouseEvent, useContext, useEffect, useRef, useState } from 'react';
+import { MouseEvent, useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import IconSwimming from '@/images/icons/icon-swimming-black-single-wave.svg';
-import { AppContextInterface, AppCtx } from '@/context/Context';
 import IconSwimmingDoubleWave from '@/images/icons/icon-swimming-black.svg';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 /**
  * Location section component`
  *
  * @returns {*}  {JSX.Element}
  */
-const LocationSection = (): JSX.Element => {
-    const appCtx: AppContextInterface | null = useContext(AppCtx);
+const Location = (): JSX.Element => {
     const mapContainer = useRef<HTMLDivElement | null>(null);
     const query = gsap.utils.selector(mapContainer);
     const locationBox1 = useRef<HTMLDivElement | null>(null);
@@ -28,7 +27,9 @@ const LocationSection = (): JSX.Element => {
     });
 
     useEffect(() => {
-        if (!appCtx?.homePageDoorOpen) return;
+        if (typeof window !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+        }
 
         const sectionTimeline = gsap.timeline({
             scrollTrigger: {
@@ -37,14 +38,14 @@ const LocationSection = (): JSX.Element => {
             }
         });
 
-        sectionTimeline.from(query('.location-pin '), {
-            opacity: 0,
-            y: -100,
+        sectionTimeline.to(query('.location-pin '), {
+            opacity: 1,
+            y: 0,
             duration: 1,
             cursor: 'pointer',
             ease: 'Bounce.easeOut'
         });
-    }, [appCtx?.homePageDoorOpen]);
+    }, []);
 
     useEffect(() => {
         // Item 1
@@ -158,7 +159,7 @@ const LocationSection = (): JSX.Element => {
     };
 
     return (
-        <Section className="md:mt-[23.4rem]">
+        <Section>
             <Container className="grid grid-cols-1 items-center md:grid-cols-2">
                 <div>
                     <SwimmingIcon className="max-h-[3.7rem] max-w-[5.1rem]" />
@@ -174,7 +175,7 @@ const LocationSection = (): JSX.Element => {
                     className="relative hidden min-h-[15rem] sm:min-h-[20rem] md:col-span-2 md:col-start-1 xl:block xl:min-h-[33rem]"
                 >
                     {/* Item 1 */}
-                    <div className="location-pin absolute top-2/4 left-[5%] z-[2] grid max-w-[calc(10vmin_+_6rem)] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 md:max-w-none">
+                    <div className="location-pin absolute top-2/4 left-[5%] z-[2] grid max-w-[calc(10vmin_+_6rem)] -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0 md:max-w-none">
                         <IconSwimming />
                         <span>SwimRighAt Ascot</span>
                         <span
@@ -187,7 +188,7 @@ const LocationSection = (): JSX.Element => {
                         {/* Full Location */}
                         <div
                             ref={locationBox1}
-                            className="full-location absolute bottom-full left-2/4 z-[99] grid min-w-[48.8rem] -translate-y-[2rem] -translate-x-2/4 scale-0 cursor-auto grid-cols-1 items-start justify-items-start gap-[3.4rem] overflow-hidden bg-white pb-[3.5rem] shadow-shadow1"
+                            className="full-location absolute bottom-full left-2/4 z-[99] grid min-w-[48.8rem] -translate-y-[2rem] -translate-x-2/4 scale-0 grid-cols-1 items-start justify-items-start gap-[3.4rem] overflow-hidden bg-white pb-[3.5rem] shadow-shadow1"
                         >
                             <div className="h-[19rem] w-full">
                                 <img
@@ -220,7 +221,7 @@ const LocationSection = (): JSX.Element => {
                     </div>
 
                     {/* Item 2 */}
-                    <div className="top-35 location-pin absolute left-1/4 top-20 z-[2] grid cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4">
+                    <div className="top-35 location-pin absolute left-1/4 top-20 z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
                         <IconSwimming />
                         <span>SwimRigh At windsor</span>
                         <span
@@ -233,7 +234,7 @@ const LocationSection = (): JSX.Element => {
                         {/* Full Location */}
                         <div
                             ref={locationBox2}
-                            className="full-location absolute bottom-full left-2/4 z-[99] grid min-w-[48.8rem] -translate-y-[2rem] -translate-x-2/4 scale-0 cursor-auto grid-cols-1 items-start justify-items-start gap-[3.4rem] overflow-hidden bg-white pb-[3.5rem] shadow-shadow1"
+                            className="full-location absolute bottom-full left-2/4 z-[99] grid min-w-[48.8rem] -translate-y-[2rem] -translate-x-2/4 scale-0 grid-cols-1 items-start justify-items-start gap-[3.4rem] overflow-hidden bg-white pb-[3.5rem] shadow-shadow1"
                         >
                             <div className="h-[19rem] w-full">
                                 <img
@@ -266,7 +267,7 @@ const LocationSection = (): JSX.Element => {
                     </div>
 
                     {/* Item 3 */}
-                    <div className="location-pin absolute left-2/4 z-[2] grid cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4">
+                    <div className="location-pin absolute left-2/4 z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
                         <IconSwimming />
                         <span>Adult SwimRigh At holand park</span>
                         <span
@@ -279,7 +280,7 @@ const LocationSection = (): JSX.Element => {
                         {/* Full Location */}
                         <div
                             ref={locationBox3}
-                            className="full-location absolute bottom-full left-2/4 z-[99] grid min-w-[48.8rem] -translate-y-[2rem] -translate-x-2/4 scale-0 cursor-auto grid-cols-1 items-start justify-items-start gap-[3.4rem] overflow-hidden bg-white pb-[3.5rem] shadow-shadow1"
+                            className="full-location absolute bottom-full left-2/4 z-[99] grid min-w-[48.8rem] -translate-y-[2rem] -translate-x-2/4 scale-0 grid-cols-1 items-start justify-items-start gap-[3.4rem] overflow-hidden bg-white pb-[3.5rem] shadow-shadow1"
                         >
                             <div className="h-[19rem] w-full">
                                 <img
@@ -312,7 +313,7 @@ const LocationSection = (): JSX.Element => {
                     </div>
 
                     {/* Item 4 */}
-                    <div className="location-pin absolute top-2/4 right-[5%] z-[2] grid cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4">
+                    <div className="location-pin absolute top-2/4 right-[5%] z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
                         <IconSwimming />
                         <span>SwimRigh at home</span>
                         <span
@@ -325,7 +326,7 @@ const LocationSection = (): JSX.Element => {
                         {/* Full Location */}
                         <div
                             ref={locationBox4}
-                            className="full-location absolute bottom-full left-2/4 z-[99] grid min-w-[48.8rem] -translate-y-[2rem] -translate-x-2/4 scale-0 cursor-auto grid-cols-1 items-start justify-items-start gap-[3.4rem] overflow-hidden bg-white pb-[3.5rem] shadow-shadow1"
+                            className="full-location absolute bottom-full left-2/4 z-[99] grid min-w-[48.8rem] -translate-y-[2rem] -translate-x-2/4 scale-0 grid-cols-1 items-start justify-items-start gap-[3.4rem] overflow-hidden bg-white pb-[3.5rem] shadow-shadow1"
                         >
                             <div className="h-[19rem] w-full">
                                 <img
@@ -375,4 +376,4 @@ const LocationSection = (): JSX.Element => {
     );
 };
 
-export default LocationSection;
+export default Location;

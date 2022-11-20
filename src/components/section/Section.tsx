@@ -1,7 +1,7 @@
 interface PropInterface {
     children: JSX.Element | JSX.Element[];
-    className?: string | null;
-    defaultClassName?: string | null;
+    className?: string;
+    defaultClassName?: string;
 }
 
 /**

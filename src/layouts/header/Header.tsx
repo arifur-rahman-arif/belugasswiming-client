@@ -49,11 +49,13 @@ const Header = (): JSX.Element => {
                 }`}
             >
                 <div className={`${(stickyNavActive && 'md:mt-0') || 'md:mt-[4.8rem]'} grid place-items-center`}>
-                    <img
-                        className={`w-[12rem] object-contain md:h-[8.2rem] md:w-[16rem]`}
-                        src="/images/logos/logo.svg"
-                        alt=""
-                    />
+                    <a href="/">
+                        <img
+                            className={`w-[12rem] object-contain md:h-[8.2rem] md:w-[16rem]`}
+                            src="/images/logos/logo.svg"
+                            alt=""
+                        />
+                    </a>
                 </div>
 
                 <Navbar hamburgerActive={hamburgerActive} stickyNavActive={stickyNavActive} />

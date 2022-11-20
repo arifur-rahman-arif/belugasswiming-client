@@ -5,7 +5,7 @@ import LocationSection from './LocationSection';
 import MehdiSection from './MehdiSection';
 import PrivateSwiming from './PrivateSwiming';
 import OurClientsSection from './our-clients/OurClientsSection';
-import FormSection from './form-section/FormSection';
+import FormSection from '../form-section/FormSection';
 
 export {
     PrivateSwiming,

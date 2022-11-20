@@ -1,20 +1,20 @@
 import { Container } from '@/components/container';
 
 /**
- * Masthead section of 'about-us' page
+ * Masthead section of '/swimming-lesson-cost' page
  *
  * @returns {*}  {JSX.Element}
  */
-const MastheadAboutUs = (): JSX.Element => {
+const MastheadSwimmingLesson = (): JSX.Element => {
     return (
         <>
             <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-about-us.png')] bg-cover bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:pt-[13rem]">
                 <Container className="relative grid h-full grid-cols-1 justify-items-start pt-[7.3rem]">
-                    <h3 className="mt-4 text-teal">private swimming instructors</h3>
+                    <h3 className="mt-4 text-teal">swimming lessons cost</h3>
                     <img
-                        src="/images/logos/all-about-swimright.svg"
+                        src="/images/logos/prices-that-make-you-swim.svg"
                         className="mt-8"
-                        alt="Your swimright journey starts here"
+                        alt="Prices that make you Swim"
                     />
 
                     <button
@@ -38,4 +38,4 @@ const MastheadAboutUs = (): JSX.Element => {
         </>
     );
 };
-export default MastheadAboutUs;
+export default MastheadSwimmingLesson;

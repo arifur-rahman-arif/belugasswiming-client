@@ -1,4 +1,5 @@
 import Nowhere from './Nowhere';
 import AboutUs from './AboutUs';
+import Location from './Location';
 
-export { AboutUs, Nowhere };
+export { AboutUs, Nowhere, Location };

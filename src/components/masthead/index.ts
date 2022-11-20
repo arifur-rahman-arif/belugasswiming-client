@@ -1,4 +1,6 @@
-import MastheadAboutUs from '@/components/masthead/MastheadAboutUs';
+import MastheadAboutUs from './MastheadAboutUs';
+import MastheadSwimmingLesson from './MastheadSwimmingLesson';
 import MastHead from './MastHead';
+import MastheadContact from './MastheadContact';
 
-export { MastHead, MastheadAboutUs };
+export { MastHead, MastheadAboutUs, MastheadSwimmingLesson, MastheadContact };

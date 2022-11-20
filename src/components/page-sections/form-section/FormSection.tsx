@@ -27,7 +27,7 @@ const FormSection = (): JSX.Element => {
             ease: 'steps(12)',
             scrollTrigger: {
                 trigger: yellowElement.current,
-                start: 'top 85%'
+                start: 'top 75%'
             }
         });
 
@@ -37,7 +37,7 @@ const FormSection = (): JSX.Element => {
             ease: 'steps(12)',
             scrollTrigger: {
                 trigger: yellowHorizontalElement.current,
-                start: 'top 85%'
+                start: 'top 75%'
             }
         });
     }, [appCtx?.homePageDoorOpen]);

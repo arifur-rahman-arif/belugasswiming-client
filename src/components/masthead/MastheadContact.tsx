@@ -5,17 +5,15 @@ import { Container } from '@/components/container';
  *
  * @returns {*}  {JSX.Element}
  */
-const MastheadAboutUs = (): JSX.Element => {
+const MastheadContact = (): JSX.Element => {
     return (
         <>
-            <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-about-us.png')] bg-cover bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:pt-[13rem]">
+            <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-contact.png')] bg-cover bg-center bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:pt-[13rem]">
                 <Container className="relative grid h-full grid-cols-1 justify-items-start pt-[7.3rem]">
-                    <h3 className="mt-4 text-teal">private swimming instructors</h3>
-                    <img
-                        src="/images/logos/all-about-swimright.svg"
-                        className="mt-8"
-                        alt="Your swimright journey starts here"
-                    />
+                    <h3 className="mt-4 text-teal">
+                        We try to reply <br /> within 24hours
+                    </h3>
+                    <img src="/images/logos/contact-us.svg" className="mt-8" alt="Your swimright journey starts here" />
 
                     <button
                         type="button"
@@ -38,4 +36,4 @@ const MastheadAboutUs = (): JSX.Element => {
         </>
     );
 };
-export default MastheadAboutUs;
+export default MastheadContact;

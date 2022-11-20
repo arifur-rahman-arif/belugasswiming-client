@@ -1,12 +1,11 @@
 import { Container } from '@/components/container';
 import { Section } from '@/components/section';
-import { AppContextInterface, AppCtx } from '@/context/Context';
-import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
-import { useContext, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+import { HorizontalSlider } from '@/components/slider';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import IconSwimming from '@/icons/icon-swimming-black.svg';
 import IconCalendar from '@/icons/icon-calender-outline.svg';
-import { HorizontalSlider } from '@/components/slider';
 
 const sliders = [
     // Item 1
@@ -76,18 +75,20 @@ const sliders = [
         </div>
     </div>
 ];
+
 /**
- * Terms section component for home page
+ * Terms section component for '/swimming-lesson-cost' page
  *
- * @returns {*}
+ * @returns {*}  {JSX.Element}
  */
-const TermsSection = () => {
-    const appCtx: AppContextInterface | null = useContext(AppCtx);
+const Terms = (): JSX.Element => {
     const yellowElement = useRef<HTMLDivElement>(null);
     const imageElement = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (!appCtx?.homePageDoorOpen) return;
+        if (typeof window !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+        }
 
         gsap.to(yellowElement.current, {
             height: '15rem',
@@ -98,23 +99,25 @@ const TermsSection = () => {
                 start: 'top 75%'
             }
         });
-    }, [appCtx?.homePageDoorOpen]);
+    }, []);
 
     return (
-        <Section>
+        <Section defaultClassName="mt-12">
             <Container className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-y-12">
-                <div className="col-span-2 col-start-1">
-                    <SwimmingIcon className="max-h-[3.7rem] max-w-[5.1rem]" />
-                    <h2 className="mt-12">Classes and Terms</h2>
-                    <h3 className="mt-4 text-teal">All Age and levels swimming lessons</h3>
-                </div>
+                <span className="col-span-2 text-[2.4rem] font-bold uppercase leading-[2.8rem] text-headingColor">
+                    Terms
+                </span>
 
-                <div className="col-span-2 flex items-start justify-start md:col-span-1">
+                <div className="col-span-2 grid h-full grid-cols-[auto_1fr] grid-rows-[1fr_auto] md:col-span-1">
                     <span ref={yellowElement} className="h-[0] w-[0.8rem] bg-primary"></span>
-                    <div ref={imageElement} className="relative w-full overflow-hidden">
+
+                    <div
+                        ref={imageElement}
+                        className="relative flex w-full items-center justify-center overflow-hidden py-16 px-12 shadow-shadow1 lg:py-[7.6rem] lg:px-40"
+                    >
                         <img
-                            className="h-full w-full"
-                            src="/images/section-images/person-getting-out-of-pool.png"
+                            className="mx-auto object-contain"
+                            src="/images/section-images/swimming-tutorial.png"
                             alt=""
                         />
                     </div>
@@ -126,4 +129,4 @@ const TermsSection = () => {
     );
 };
 
-export default TermsSection;
+export default Terms;

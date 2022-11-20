@@ -22,7 +22,7 @@ const PrivateSwiming = () => {
         const sectionTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: imgElement.current,
-                start: 'top 85%'
+                start: 'top 75%'
             }
         });
 

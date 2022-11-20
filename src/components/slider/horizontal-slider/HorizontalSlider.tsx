@@ -1,19 +1,23 @@
-import SliderCard from './SliderCard';
 import IconTop from '@/images/icons/icon-angle-top.svg';
 import IconDown from '@/images/icons/icon-angle-down.svg';
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import SliderCard from './SliderCard';
+
+interface PropInterface {
+    sliders: JSX.Element[];
+}
 
 let sliderPosition = 0;
 let activeIndexes = [0, 1];
 
 /**
- * Terms slider component
+ * Horizontal slider component for the application
  *
+ * @param {PropInterface} { sliders }
  * @returns {*}  {JSX.Element}
  */
-const TermsSlider = (): JSX.Element => {
-    const sliderArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const HorizontalSlider = ({ sliders }: PropInterface): JSX.Element => {
     const sliderContainer = useRef<HTMLDivElement>(null);
     const sliderWrapper = useRef<HTMLDivElement>(null);
     const [sliderIndex, setSliderIndex] = useState<number>(0);
@@ -27,7 +31,7 @@ const TermsSlider = (): JSX.Element => {
     const slideDown = () => {
         const containerWidth = sliderContainerHeight || sliderContainer.current?.clientHeight;
 
-        if (sliderIndex >= sliderArray.length - 2) return;
+        if (sliderIndex >= sliders.length - 2) return;
         if (!containerWidth) return;
 
         sliderPosition -= containerWidth / 2 + 30;
@@ -78,33 +82,37 @@ const TermsSlider = (): JSX.Element => {
     return (
         <div
             ref={sliderContainer}
-            className="relative grid h-full max-h-[80rem] min-h-[80rem] grid-cols-[1fr_auto] gap-4 overflow-hidden md:min-h-full md:gap-12 md:pl-12 xl:gap-[7rem]"
+            className="relative grid h-full max-h-[80rem] min-h-[80rem] grid-cols-[1fr_auto] gap-4 overflow-hidden md:min-h-[85rem] md:gap-12 md:pl-12 xl:gap-[7rem]"
         >
             <div
                 ref={sliderWrapper}
                 className="relative grid h-auto w-full grid-cols-1 gap-12"
                 style={{
-                    gridTemplateRows: `repeat(${sliderArray.length}, ${sliderContainerHeight / 2}px)`
+                    gridTemplateRows: `repeat(${sliders.length}, ${sliderContainerHeight / 2 - 25}px)`
                 }}
             >
-                {sliderArray.map((item, index) => (
-                    <SliderCard key={index} index={index} />
+                {sliders.map((item, index) => (
+                    <SliderCard key={index} children={sliders[index]} />
                 ))}
             </div>
 
             <div className="min-w-[3rem] md:min-w-[1rem]">
                 <div className="absolute top-2/4 right-0 z-[2] flex -translate-y-2/4 flex-col items-center justify-center gap-[1.5rem]">
-                    <span
-                        onClick={slideUp}
-                        className="cursor-pointer p-4 transition-all hover:scale-[1.3] hover:bg-grey20"
-                    >
-                        <IconTop />
-                    </span>
+                    {sliders.length <= 2 ? (
+                        <></>
+                    ) : (
+                        <span
+                            onClick={slideUp}
+                            className="cursor-pointer p-4 transition-all hover:scale-[1.3] hover:bg-grey20"
+                        >
+                            <IconTop />
+                        </span>
+                    )}
 
                     <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">01</span>
 
                     <div className="flex flex-col items-center justify-center gap-4">
-                        {sliderArray.map((item, index) => (
+                        {sliders.map((item, index) => (
                             <div
                                 key={index}
                                 className={`h-[2rem] w-[0.4rem] transition-all duration-500 ${
@@ -115,19 +123,23 @@ const TermsSlider = (): JSX.Element => {
                     </div>
 
                     <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">
-                        {sliderArray.length.toString().padStart(2, '0')}
+                        {sliders.length.toString().padStart(2, '0')}
                     </span>
 
-                    <span
-                        onClick={slideDown}
-                        className="cursor-pointer p-4 transition-all hover:scale-[1.3] hover:bg-grey20"
-                    >
-                        <IconDown />
-                    </span>
+                    {sliders.length <= 2 ? (
+                        <></>
+                    ) : (
+                        <span
+                            onClick={slideDown}
+                            className="cursor-pointer p-4 transition-all hover:scale-[1.3] hover:bg-grey20"
+                        >
+                            <IconDown />
+                        </span>
+                    )}
                 </div>
             </div>
         </div>
     );
 };
 
-export default TermsSlider;
+export default HorizontalSlider;

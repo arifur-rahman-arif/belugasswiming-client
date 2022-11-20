@@ -46,6 +46,9 @@
 			],
 			"@/page-sections/*": [
 				"src/components/page-sections/*"
+			],
+			"@/icons/*": [
+				"public/images/icons/*"
 			]
 		}
   },

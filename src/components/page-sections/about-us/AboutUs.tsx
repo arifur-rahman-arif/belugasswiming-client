@@ -22,7 +22,7 @@ const AboutUs = () => {
         const timeLine = gsap.timeline({
             scrollTrigger: {
                 trigger: imgElement.current,
-                start: 'top 65%'
+                start: 'top 75%'
             }
         });
 
@@ -41,7 +41,7 @@ const AboutUs = () => {
                         duration: 1.5,
                         ease: 'sine.inOut'
                     },
-                    '-=0.5'
+                    '-=1'
                 );
         } else {
             timeLine
@@ -58,7 +58,7 @@ const AboutUs = () => {
                         duration: 1.5,
                         ease: 'sine.inOut'
                     },
-                    '-=0.5'
+                    '-=1'
                 );
         }
     }, []);
