@@ -4,6 +4,7 @@
 *.sh
 *.conf
 *.d.ts
+*.php
 Dockerfile*
 package.json
 composer.json

@@ -6,9 +6,10 @@ import { Section } from '@/components/section';
 import IconRefresh from '@/icons/icon-refresh.svg';
 import ContactSectionRight from './ContactSectionRight';
 import { AppContextInterface, AppCtx } from '@/context/Context';
-import { FormEvent, useContext, useState } from 'react';
+import { FormEvent, useContext, useEffect, useRef, useState } from 'react';
 import IconSpin from '@/icons/icon-spin.svg';
-import axios from 'axios';
+import { BELUGA_REST_URL } from '@/utils/constant';
+import { gsap } from 'gsap';
 
 /**
  * Contact section for the contact page
@@ -18,8 +19,7 @@ import axios from 'axios';
 const ContactSection = (): JSX.Element => {
     const appCtx: AppContextInterface | null = useContext(AppCtx);
     const [formSubmitSuccessFull, setFormSubmitSuccessFull] = useState<boolean>(false);
-
-    console.log(formSubmitSuccessFull);
+    const alertElement = useRef<HTMLDivElement>(null);
 
     /**
      * Reset the contact form
@@ -50,8 +50,9 @@ const ContactSection = (): JSX.Element => {
 
         appCtx?.setFormSubmitted(true);
 
-        axios
-            .post(`${process.env.NEXT_PUBLIC_BELUGA_REST_URL}/submit-contact-form`, {
+        fetch(`${process.env.NEXT_PUBLIC_BELUGA_REST_URL || BELUGA_REST_URL}/submit-contact-form`, {
+            method: 'POST',
+            body: JSON.stringify({
                 profferedFormOfContact: {
                     phone: appCtx?.preferredPhone,
                     email: appCtx?.preferredEmail,
@@ -61,47 +62,42 @@ const ContactSection = (): JSX.Element => {
                 phone: appCtx?.contactPhone,
                 email: appCtx?.contactEmail,
                 description: appCtx.contactDescription
-            })
-            .then(function (response) {
-                console.log(response);
-                appCtx?.setFormSubmitted(true);
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                appCtx?.setFormSubmitted(false);
                 setFormSubmitSuccessFull(true);
+                resetForm();
             })
-            .catch(function (error) {
+            .catch((error) => {
                 appCtx?.setFormSubmitted(false);
                 console.error(error);
             });
-
-        // Fetch(`${process.env.NEXT_PUBLIC_BELUGA_REST_URL}/submit-contact-form`, {
-        //     method: 'POST',
-        //     body: JSON.stringify({
-        //         profferedFormOfContact: {
-        //             phone: appCtx?.preferredPhone,
-        //             email: appCtx?.preferredEmail,
-        //             text: appCtx?.preferredText
-        //         },
-        //         name: appCtx.contactName,
-        //         phone: appCtx?.contactPhone,
-        //         email: appCtx?.contactEmail,
-        //         description: appCtx.contactDescription
-        //     }),
-        //     headers: {
-        //         // 'X-WP-NONCE': iclinic.nonce,
-        //         // 'Access-Control-Allow-Origin': '*',
-        //         'Content-Type': 'application/json'
-        //     }
-        // })
-        //     .then((response) => response.json())
-        //     .then((data) => {
-        //         console.log(data);
-        //         appCtx?.setFormSubmitted(true);
-        //         setFormSubmitSuccessFull(true);
-        //     })
-        //     .catch((error) => {
-        //         appCtx?.setFormSubmitted(false);
-        //         console.error(error);
-        //     });
     };
+
+    useEffect(() => {
+        if (!formSubmitSuccessFull) return;
+
+        gsap.to(alertElement.current, {
+            height: '5rem',
+            duration: 0.4,
+            autoAlpha: 1,
+            ease: 'sine.inOut'
+        });
+
+        setTimeout(() => {
+            gsap.to(alertElement.current, {
+                height: 0,
+                duration: 0.4,
+                autoAlpha: 0,
+                ease: 'sine.inOut'
+            });
+        }, 5000);
+    }, [formSubmitSuccessFull]);
 
     return (
         <Section>
@@ -111,7 +107,32 @@ const ContactSection = (): JSX.Element => {
                         Get in touch
                     </span>
                     {/* Col 1 */}
-                    <div className="grid grid-cols-1 gap-12  xl:grid-cols-2 ">
+                    <div className="grid grid-cols-1 gap-12 xl:grid-cols-2">
+                        {/* Alert */}
+                        <div
+                            className="col-span-2 flex h-0 w-full items-center overflow-hidden rounded-lg bg-teal px-6 text-base opacity-0"
+                            role="alert"
+                            ref={alertElement}
+                        >
+                            <svg
+                                aria-hidden="true"
+                                focusable="false"
+                                data-prefix="fas"
+                                data-icon="check-circle"
+                                className="mr-2 h-8 w-8"
+                                role="img"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                            >
+                                <path
+                                    fill="#fff"
+                                    d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                                ></path>
+                            </svg>
+                            <span className="ml-4 text-[1.6rem] font-bold uppercase text-white">
+                                Thank you. We will contact you soon.
+                            </span>
+                        </div>
                         {/* Form input area */}
                         <div className="flex flex-col items-start justify-start">
                             <PreferredFormOfContact />
@@ -123,17 +144,15 @@ const ContactSection = (): JSX.Element => {
                         <Description />
 
                         <div className="flex items-center justify-start gap-[2.8rem] justify-self-end xl:col-span-2">
-                            {!appCtx?.formSubmitted && (
-                                <span
-                                    className="flex cursor-pointer items-center justify-center gap-4 px-8 py-12"
-                                    onClick={resetForm}
-                                >
-                                    <IconRefresh className="max-h-[1.6rem] max-w-[1.6rem]" />
-                                    <span className="text-[1.4rem] font-medium uppercase leading-[1.6rem] text-headingColor">
-                                        RESET
-                                    </span>
+                            <span
+                                className="flex cursor-pointer items-center justify-center gap-4 px-8 py-12"
+                                onClick={resetForm}
+                            >
+                                <IconRefresh className="max-h-[1.6rem] max-w-[1.6rem]" />
+                                <span className="text-[1.4rem] font-medium uppercase leading-[1.6rem] text-headingColor">
+                                    RESET
                                 </span>
-                            )}
+                            </span>
                             <button
                                 type="submit"
                                 form="contact-form"
