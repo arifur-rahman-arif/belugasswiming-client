@@ -37,7 +37,7 @@ const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Elemen
                         }`}
                     >
                         <Link
-                            href="#"
+                            href="/about-us"
                             className={`${
                                 (stickyNavActive && 'md:!text-secondary') || ''
                             } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary md:text-primary xl:text-white`}
@@ -52,7 +52,7 @@ const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Elemen
                         }`}
                     >
                         <Link
-                            href="#"
+                            href="/contact"
                             className={`${
                                 (stickyNavActive && 'md:!text-secondary') || ''
                             } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary md:text-primary xl:text-white`}
@@ -67,7 +67,7 @@ const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Elemen
                         }`}
                     >
                         <Link
-                            href="#"
+                            href="/swimming-lesson-cost"
                             className={`${
                                 (stickyNavActive && 'md:!text-secondary') || ''
                             } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary md:text-primary xl:text-white`}
@@ -77,7 +77,7 @@ const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Elemen
                     </li>
 
                     <li>
-                        <Link href="#" className="">
+                        <Link href="/swimming-lesson-cost" className="">
                             <button
                                 type="button"
                                 className={`cursor-pointer rounded-[1.5rem] border-2 border-primary bg-primary py-[1.8rem] px-[2.4rem] text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-transparent ${

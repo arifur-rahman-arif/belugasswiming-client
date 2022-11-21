@@ -12,7 +12,7 @@ const nextConfig = {
     return config;
   },
   // experimental:{appDir: true}
-  // assetPrefix: './' // Use this option if next static export is needed
+  // assetPrefix: './' // Turn off this option if next static export is needed
 }
 
 module.exports = nextConfig

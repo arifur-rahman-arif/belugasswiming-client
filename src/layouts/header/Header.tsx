@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState, MouseEvent, useRef, useEffect } from 'react';
 import Hamburger from './hamburger/Hamburger';
 import Navbar from './Navbar';
@@ -49,13 +50,13 @@ const Header = (): JSX.Element => {
                 }`}
             >
                 <div className={`${(stickyNavActive && 'md:mt-0') || 'md:mt-[4.8rem]'} grid place-items-center`}>
-                    <a href="/">
+                    <Link href="/">
                         <img
                             className={`w-[12rem] object-contain md:h-[8.2rem] md:w-[16rem]`}
                             src="/images/logos/logo.svg"
                             alt=""
                         />
-                    </a>
+                    </Link>
                 </div>
 
                 <Navbar hamburgerActive={hamburgerActive} stickyNavActive={stickyNavActive} />

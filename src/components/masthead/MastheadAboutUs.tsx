@@ -1,4 +1,5 @@
 import { Container } from '@/components/container';
+import Link from 'next/link';
 
 /**
  * Masthead section of 'about-us' page
@@ -17,12 +18,14 @@ const MastheadAboutUs = (): JSX.Element => {
                         alt="Your swimright journey starts here"
                     />
 
-                    <button
-                        type="button"
-                        className={`mt-24 cursor-pointer rounded-[1.5rem] border-2 border-primary bg-transparent py-[1.8rem] px-[2.4rem] text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-primary `}
-                    >
-                        Request a call back
-                    </button>
+                    <Link href="/contact">
+                        <button
+                            type="button"
+                            className={`mt-24 cursor-pointer rounded-[1.5rem] border-2 border-primary bg-transparent py-[1.8rem] px-[2.4rem] text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-primary `}
+                        >
+                            Request a call back
+                        </button>
+                    </Link>
 
                     <div className="flex flex-col items-start justify-start gap-[1.5rem] justify-self-end pb-24 pt-24 md:pt-0">
                         <img
