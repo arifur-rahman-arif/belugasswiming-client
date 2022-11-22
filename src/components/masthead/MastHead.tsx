@@ -1,9 +1,9 @@
-import { useContext, useEffect } from 'react';
 import styles from './styles/MastHead.module.scss';
 import LeftDoor from './LeftDoor';
-import { AppContextInterface, AppCtx } from '../../context/Context';
 import RightDoor from './RightDoor';
 import MastHeadPortfolio from './MastHeadPortfolio';
+import { AppContextInterface, AppCtx } from '@/context/Context';
+import { useContext } from 'react';
 
 /**
  * Masthead component
@@ -13,22 +13,6 @@ import MastHeadPortfolio from './MastHeadPortfolio';
 const MastHead = (): JSX.Element => {
     const appCtx: AppContextInterface | null = useContext(AppCtx);
 
-    /**
-     * Open the page door. If its opened already then don't change the state of the door anymore
-     */
-    const openDoor = () => {
-        if (appCtx?.homePageDoorOpen) return;
-
-        appCtx?.setHomePageDoorOpen(true);
-        const body = document.querySelector('body');
-        body?.classList.remove('overflow-hidden');
-        body?.classList.add('overflow-visible');
-    };
-
-    useEffect(() => {
-        document.querySelector('body')?.classList.add('overflow-hidden');
-    }, []);
-
     return (
         <>
             <div
@@ -37,7 +21,6 @@ const MastHead = (): JSX.Element => {
                 } ${(appCtx?.homePageDoorOpen && styles.mastheadOpen) || ''} ${
                     appCtx?.homePageDoorOpen && 'pointer-events-none'
                 }`}
-                onClick={openDoor}
             >
                 <LeftDoor />
                 <RightDoor />

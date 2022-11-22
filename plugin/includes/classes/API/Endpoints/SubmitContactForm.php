@@ -77,7 +77,7 @@ class SubmitContactForm implements EndpointInterface {
         ';
         $headers = ['Content-Type: text/html; charset=UTF-8'];
 
-        if (!wp_mail($to, $subject, $message, $headers)) {
+        if (wp_mail($to, $subject, $message, $headers)) {
             wp_send_json_success([
                 'status'  => 'success',
                 'message' => esc_html__('Form submitted successfully', BELUGA_TEXT_DOMAIN)

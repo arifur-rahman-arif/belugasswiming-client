@@ -1,4 +1,5 @@
-import YellowPin from '@/images/icons/icon-pin-head-left-yellow.svg';
+import { AppContextInterface, AppCtx } from '@/context/Context';
+import { useContext, useEffect } from 'react';
 
 /**
  * Left masthead door
@@ -6,6 +7,24 @@ import YellowPin from '@/images/icons/icon-pin-head-left-yellow.svg';
  * @returns {*}  {JSX.Element}
  */
 const LeftDoor = (): JSX.Element => {
+    const appCtx: AppContextInterface | null = useContext(AppCtx);
+
+    /**
+     * Open the page door. If its opened already then don't change the state of the door anymore
+     */
+    const openDoor = () => {
+        if (appCtx?.homePageDoorOpen) return;
+
+        appCtx?.setHomePageDoorOpen(true);
+        const body = document.querySelector('body');
+        body?.classList.remove('overflow-hidden');
+        body?.classList.add('overflow-visible');
+    };
+
+    useEffect(() => {
+        document.querySelector('body')?.classList.add('overflow-hidden');
+    }, []);
+
     return (
         <div className="mx-auto mt-36 h-[calc(100%_-_9rem)] w-full bg-white md:mt-0 md:h-auto">
             <div className="ml-auto h-full w-full md:max-w-[calc(var(--container-width)_/_2)]">
@@ -14,13 +33,14 @@ const LeftDoor = (): JSX.Element => {
 
                     <h2 className="hidden">SwimRight</h2>
 
-                    <img src="/images/logos/swimright.svg" alt="swimright" />
+                    <img src="/images/logos/swimright.svg" alt="swimright" className="mt-8" />
 
-                    <p className=" w-full max-w-[31rem] pt-8 text-left text-white md:text-secondary">
-                        Become more comfortable in the water with our private swimming instructors.
+                    <p className="-mt-12 w-full max-w-[37rem] text-left text-white md:text-secondary">
+                        There is nothing more convenient and practical than having a swim session at your home pool with
+                        a private swimming instructors.
                     </p>
 
-                    <ul id="Hello" className="mt-12 flex flex-col items-start justify-start gap-12 md:mt-[6.6rem]">
+                    {/* <ul id="Hello" className="mt-12 flex flex-col items-start justify-start gap-12 md:mt-[6.6rem]">
                         <li className="grid grid-cols-[1fr_auto] items-center justify-items-start gap-[1.5rem]">
                             <YellowPin className="md:max-w-16 block" />
                             <div className="flex flex-wrap items-center justify-start gap-8">
@@ -54,7 +74,19 @@ const LeftDoor = (): JSX.Element => {
                                 </span>
                             </div>
                         </li>
-                    </ul>
+                    </ul> */}
+
+                    <h5 className="mx-auto mt-20 max-w-[25.4rem] text-center font-medium capitalize md:mt-[7.8rem]">
+                        If you want to swimright enter here
+                    </h5>
+
+                    <button
+                        type="button"
+                        className={`mx-auto mt-24 block cursor-pointer rounded-[1.5rem] border-2 border-primary bg-transparent py-[1.8rem] px-[2.4rem] text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-primary `}
+                        onClick={openDoor}
+                    >
+                        Enter
+                    </button>
                 </div>
             </div>
         </div>

@@ -174,21 +174,11 @@ body {
     h5 {
         &,
         * {
-            font-size: 1.6rem;
-            line-height: 1.6rem;
+            font-size: 2rem;
+            line-height: 2.4rem;
             font-weight: bolder;
             font-family: var(--font-lato-bold);
             text-transform: uppercase;
-
-            @include media-breakpoint-up(md) {
-                font-size: 2.4rem;
-                line-height: 2.4rem;
-            }
-
-            @include media-breakpoint-up(xl) {
-                font-size: 3.2rem;
-                line-height: 3.2rem;
-            }
         }
     }
 

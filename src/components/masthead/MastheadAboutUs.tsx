@@ -9,7 +9,7 @@ import Link from 'next/link';
 const MastheadAboutUs = (): JSX.Element => {
     return (
         <>
-            <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-about-us.png')] bg-cover bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:pt-[13rem]">
+            <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-about-us.png')] bg-cover bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:pt-[13rem] 2xl:bg-[url('/images/masthead/masthead-about-us-large.png')]">
                 <Container className="relative grid h-full grid-cols-1 justify-items-start pt-[7.3rem]">
                     <h3 className="mt-4 text-teal">private swimming instructors</h3>
                     <img
