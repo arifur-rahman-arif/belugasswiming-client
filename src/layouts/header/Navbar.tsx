@@ -1,5 +1,6 @@
+import HomeIcon from '@/icons/icon-home-white-outline.svg';
 import Link from 'next/link';
-import HomeIcon from '@/images/icons/icon-home-white-outline.svg';
+import { useRouter } from 'next/router';
 
 interface PropInterface {
     hamburgerActive: boolean;
@@ -13,6 +14,8 @@ interface PropInterface {
  * @returns {JSX.Element}
  */
 const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Element => {
+    const router = useRouter();
+
     return (
         <nav className={`absolute top-[9rem] left-0 z-50 h-full w-full md:relative md:top-0 md:block`}>
             <div
@@ -26,53 +29,56 @@ const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Elemen
                             <HomeIcon
                                 className={`${
                                     (stickyNavActive && 'md:!fill-secondary') || ''
-                                } fill-secondary xl:fill-none`}
+                                } fill-secondary xl:fill-none ${router.pathname == '/' ? '!fill-primary' : ''}`}
                             />
                         </Link>
                     </li>
                     <li
-                        className={`w-full cursor-pointer whitespace-nowrap text-center transition-all hover:underline hover:decoration-secondary hover:underline-offset-8 md:w-auto ${
-                            (stickyNavActive && 'md:hover:decoration-secondary') ||
-                            'hover:md:decoration-primary xl:hover:decoration-white'
-                        }`}
+                        className={`w-full cursor-pointer whitespace-nowrap text-center underline-offset-8 transition-all hover:underline  md:w-auto ${
+                            (stickyNavActive && 'md:hover:decoration-secondary') || 'hover:md:decoration-primary'
+                        } ${router.pathname == '/about-us' ? '!underline !decoration-primary' : ''}`}
                     >
                         <Link
                             href="/about-us"
                             className={`${
                                 (stickyNavActive && 'md:!text-secondary') || ''
-                            } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary md:text-primary xl:text-white`}
+                            } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary hover:text-primary md:text-white ${
+                                router.pathname == '/about-us' ? '!text-primary' : ''
+                            }`}
                         >
                             Who we are
                         </Link>
                     </li>
                     <li
-                        className={`w-full cursor-pointer whitespace-nowrap text-center transition-all hover:underline hover:decoration-secondary hover:underline-offset-8 md:w-auto ${
-                            (stickyNavActive && 'md:hover:decoration-secondary') ||
-                            'hover:md:decoration-primary xl:hover:decoration-white'
-                        }`}
-                    >
-                        <Link
-                            href="/contact"
-                            className={`${
-                                (stickyNavActive && 'md:!text-secondary') || ''
-                            } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary md:text-primary xl:text-white`}
-                        >
-                            Contact us
-                        </Link>
-                    </li>
-                    <li
-                        className={`w-full cursor-pointer whitespace-nowrap text-center transition-all hover:underline hover:decoration-secondary hover:underline-offset-8 md:w-auto ${
-                            (stickyNavActive && 'md:hover:decoration-secondary') ||
-                            'hover:md:decoration-primary xl:hover:decoration-white'
-                        }`}
+                        className={`w-full cursor-pointer whitespace-nowrap text-center underline-offset-8 transition-all hover:underline  md:w-auto ${
+                            (stickyNavActive && 'md:hover:decoration-secondary') || 'hover:md:decoration-primary'
+                        } ${router.pathname == '/swimming-lesson-cost' ? '!underline !decoration-primary' : ''}`}
                     >
                         <Link
                             href="/swimming-lesson-cost"
                             className={`${
                                 (stickyNavActive && 'md:!text-secondary') || ''
-                            } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary md:text-primary xl:text-white`}
+                            } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary hover:text-primary md:text-white ${
+                                router.pathname == '/swimming-lesson-cost' ? '!text-primary' : ''
+                            }`}
                         >
                             Pricing
+                        </Link>
+                    </li>
+                    <li
+                        className={`w-full cursor-pointer whitespace-nowrap text-center underline-offset-8 transition-all hover:underline  md:w-auto ${
+                            (stickyNavActive && 'md:hover:decoration-secondary') || 'hover:md:decoration-primary'
+                        } ${router.pathname == '/contact-swimming-instructor' ? '!underline !decoration-primary' : ''}`}
+                    >
+                        <Link
+                            href="/contact-swimming-instructor"
+                            className={`${
+                                (stickyNavActive && 'md:!text-secondary') || ''
+                            } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary hover:text-primary md:text-white ${
+                                router.pathname == '/contact-swimming-instructor' ? '!text-primary' : ''
+                            }`}
+                        >
+                            Contact us
                         </Link>
                     </li>
 

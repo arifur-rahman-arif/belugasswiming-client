@@ -58,7 +58,7 @@ class SubmitContactForm implements EndpointInterface {
      * @param object $data
      */
     public function sendEmail(object $data) {
-        $to = 'dev.ar.arif@gmail.com';
+        $to = 'team@belugaswimmingacademy.com';
         $subject = 'Form submission from ' . $data->name . '';
         $profferedPhone = $data->profferedFormOfContact->phone == 1 ? 'Yes' : 'No';
         $profferedEmail = $data->profferedFormOfContact->email == 1 ? 'Yes' : 'No';

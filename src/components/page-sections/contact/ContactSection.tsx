@@ -50,7 +50,10 @@ const ContactSection = (): JSX.Element => {
 
         appCtx?.setFormSubmitted(true);
 
-        fetch(`${process.env.NEXT_PUBLIC_BELUGA_REST_URL || BELUGA_REST_URL}/submit-contact-form`, {
+        const apiUrl =
+            process.env.ENVIRONMENT === 'Development' ? process.env.NEXT_PUBLIC_BELUGA_REST_URL : BELUGA_REST_URL;
+
+        fetch(`${apiUrl}/submit-contact-form`, {
             method: 'POST',
             body: JSON.stringify({
                 profferedFormOfContact: {

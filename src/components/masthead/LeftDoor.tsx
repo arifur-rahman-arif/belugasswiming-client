@@ -1,5 +1,7 @@
 import { AppContextInterface, AppCtx } from '@/context/Context';
 import { useContext, useEffect } from 'react';
+import Lottie, { Options } from 'react-lottie';
+import * as animationData from '@/images/lottie/arrow-down.lottie.json';
 
 /**
  * Left masthead door
@@ -8,6 +10,12 @@ import { useContext, useEffect } from 'react';
  */
 const LeftDoor = (): JSX.Element => {
     const appCtx: AppContextInterface | null = useContext(AppCtx);
+
+    const lottieOptions: Options = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData
+    };
 
     /**
      * Open the page door. If its opened already then don't change the state of the door anymore
@@ -26,7 +34,7 @@ const LeftDoor = (): JSX.Element => {
     }, []);
 
     return (
-        <div className="mx-auto mt-36 h-[calc(100%_-_9rem)] w-full bg-white md:mt-0 md:h-auto">
+        <div className="relative mx-auto mt-36 h-[calc(100%_-_9rem)] w-full bg-white md:mt-0 md:h-auto">
             <div className="ml-auto h-full w-full md:max-w-[calc(var(--container-width)_/_2)]">
                 <div className="h-full bg-[url('/images/masthead/masthead-home-bg.png')] bg-cover bg-no-repeat px-8 pt-20 md:h-auto md:bg-none md:pt-[21rem] xl:px-0">
                     <h1 className="text-teal">Private swimming lessons</h1>
@@ -35,7 +43,7 @@ const LeftDoor = (): JSX.Element => {
 
                     <img src="/images/logos/swimright.svg" alt="swimright" className="mt-8" />
 
-                    <p className="-mt-12 w-full max-w-[37rem] text-left text-white md:text-secondary">
+                    <p className="mt-12 w-full max-w-[37rem] text-left text-white md:text-secondary xl:-mt-12">
                         There is nothing more convenient and practical than having a swim session at your home pool with
                         a private swimming instructors.
                     </p>
@@ -76,17 +84,26 @@ const LeftDoor = (): JSX.Element => {
                         </li>
                     </ul> */}
 
-                    <h5 className="mx-auto mt-20 max-w-[25.4rem] text-center font-medium capitalize md:mt-[7.8rem]">
-                        If you want to swimright enter here
-                    </h5>
+                    <div className="absolute top-[40%] left-2/4 z-[1] -translate-x-2/4 md:top-2/4 ">
+                        <h5 className="mx-auto mt-20 max-w-[25.4rem] text-center font-medium capitalize text-white  md:mt-[7.8rem] md:text-headingColor">
+                            If you want to swimright enter here
+                        </h5>
 
-                    <button
-                        type="button"
-                        className={`mx-auto mt-24 block cursor-pointer rounded-[1.5rem] border-2 border-primary bg-transparent py-[1.8rem] px-[2.4rem] text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-primary `}
-                        onClick={openDoor}
-                    >
-                        Enter
-                    </button>
+                        <Lottie
+                            options={lottieOptions}
+                            speed={1}
+                            title="Enter here"
+                            style={{ width: '25x', height: '100px', marginTop: '2rem' }}
+                        />
+
+                        <button
+                            type="button"
+                            className={`mx-auto mt-4 block cursor-pointer rounded-[1.5rem] border-2 border-primary bg-transparent py-[1.8rem] px-[2.4rem] text-[1.6rem] font-bold uppercase leading-8 text-primary transition-all hover:bg-primary hover:text-secondary md:text-secondary `}
+                            onClick={openDoor}
+                        >
+                            Enter
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

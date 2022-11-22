@@ -11,6 +11,8 @@ const nextConfig = {
 
     return config;
   },
+  // Need if it will be a static file export
+  trailingSlash: true,
   // experimental:{appDir: true}
   // assetPrefix: './' // Turn off this option if next static export is needed
 }
