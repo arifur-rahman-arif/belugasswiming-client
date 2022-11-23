@@ -10,7 +10,10 @@ import { AboutUs, Location, Nowhere } from '@/page-sections/about-us';
  */
 const aboutUs = (): any => {
     return (
-        <Page title="About us">
+        <Page
+            title="Private swim instructor at home London - Ascot"
+            description="Observe the significant improvement in a short period of time. With one of our certified, experienced, and friendly instructors is an unforgettable experience."
+        >
             <MastheadAboutUs />
             <AboutUs />
             <Nowhere />

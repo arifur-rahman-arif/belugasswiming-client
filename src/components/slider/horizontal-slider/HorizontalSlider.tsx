@@ -6,6 +6,7 @@ import SliderCard from './SliderCard';
 
 interface PropInterface {
     sliders: JSX.Element[];
+    minMaxHeight?: string;
 }
 
 let sliderPosition = 0;
@@ -17,7 +18,7 @@ let activeIndexes = [0, 1];
  * @param {PropInterface} { sliders }
  * @returns {*}  {JSX.Element}
  */
-const HorizontalSlider = ({ sliders }: PropInterface): JSX.Element => {
+const HorizontalSlider = ({ sliders, minMaxHeight }: PropInterface): JSX.Element => {
     const sliderContainer = useRef<HTMLDivElement>(null);
     const sliderWrapper = useRef<HTMLDivElement>(null);
     const [sliderIndex, setSliderIndex] = useState<number>(0);
@@ -82,7 +83,9 @@ const HorizontalSlider = ({ sliders }: PropInterface): JSX.Element => {
     return (
         <div
             ref={sliderContainer}
-            className="relative grid h-full max-h-[80rem] min-h-[80rem] grid-cols-[1fr_auto] gap-4 overflow-hidden md:min-h-[85rem] md:gap-12 md:pl-12 xl:gap-[7rem]"
+            className={`relative grid h-full ${
+                minMaxHeight || 'max-h-[89rem] md:min-h-[87rem]'
+            } min-h-[80rem] grid-cols-[1fr_auto] gap-4 overflow-hidden  md:gap-12 md:pl-12 xl:gap-[7rem]`}
         >
             <div
                 ref={sliderWrapper}

@@ -10,7 +10,10 @@ import { Prices, Terms, Location } from '@/page-sections/swimming-lesson-cost';
  */
 const SwimmingLessonCost = (): JSX.Element => {
     return (
-        <Page title="Swimming Lessons Cost">
+        <Page
+            title="Private swimming lessons cost London - Ascot"
+            description="Our rates start at £40 per hour. We can always tailor solutions and costs to your specific requirements. Let's talk about it and figure out what's best for you."
+        >
             <MastheadSwimmingLesson />
             <Prices />
             <Terms />

@@ -95,12 +95,12 @@ const AboutUs = () => {
                 </div>
 
                 <div className="relative flex h-full w-full items-start  justify-start">
-                    <div className="absolute top-0 left-0 ml-28 h-full w-full bg-grey20"></div>
+                    <div className="absolute top-0 left-0 h-full w-full bg-grey20 md:ml-28"></div>
                     <span
                         ref={yellowElement}
                         className="absolute top-0 left-0 h-0 w-[0.8rem] translate-x-[calc(7rem_-_0.8rem)] bg-primary"
                     ></span>
-                    <div className="relative">
+                    <div className="relative overflow-hidden md:overflow-visible">
                         <img
                             src="/images/section-images/person-swimming-underwater.png"
                             className="relative translate-x-[7rem] opacity-0 md:-translate-x-0 xl:min-h-[46.7rem]"

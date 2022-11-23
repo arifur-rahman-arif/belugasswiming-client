@@ -34,9 +34,9 @@ const sliders = [
 
                 <div className="grid grid-cols-[1fr_auto] gap-y-[0.5] gap-x-4">
                     <IconSwimming className="max-h-[2.4rem] max-w-[2.4rem]" />
-                    <span className="font-medium leading-[1.9rem] text-secondary">Trainer</span>
+                    <span className="font-medium leading-[1.9rem] text-secondary">Trainer's</span>
                     <span className="col-span-1 col-start-2 font-medium leading-[1.9rem] text-secondary">
-                        Mehdi Nessaie
+                        Mehdi | Jhon
                     </span>
                 </div>
             </div>
@@ -69,7 +69,46 @@ const sliders = [
                     <IconSwimming className="max-h-[2.4rem] max-w-[2.4rem]" />
                     <span className="font-medium leading-[1.9rem] text-secondary">Trainer</span>
                     <span className="col-span-1 col-start-2 font-medium leading-[1.9rem] text-secondary">
-                        Mehdi | John
+                        Mehdi | Jhon
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>,
+    // Item 3
+    <div className="grid h-full w-full grid-cols-[auto_1fr]">
+        <span className="h-[15rem] w-[0.8rem] bg-primary"></span>
+
+        <div
+            className={`flex flex-col items-start justify-start bg-white p-12 shadow-shadow1 xl:py-[8.5rem] xl:px-[6.7rem]`}
+        >
+            <strong className="text-left text-[2rem] font-bold leading-[2.4rem] text-headingColor">
+                Summer Term 2023
+            </strong>
+            <span className="mt-4 text-left text-[1.6rem] font-bold uppercase leading-[1.8rem]">All levels</span>
+
+            <div className="mt-12 grid grid-cols-1 justify-items-start gap-[2.5rem]">
+                <div className="grid grid-cols-[1fr_auto] gap-y-[0.5] gap-x-4">
+                    <IconCalendar className="max-h-[2.4rem] max-w-[2.4rem]" />
+                    <span className="font-medium leading-[1.9rem] text-secondary">
+                        Monday 17th April - Sunday 23rd July
+                    </span>
+                    <span className="col-span-1 col-start-2 font-medium leading-[1.9rem] text-secondary">
+                        Half Term : Monday 29th May - Sunday 4th Jun
+                    </span>
+                </div>
+
+                <div>
+                    <strong className="text-left text-[1.6rem] font-bold capitalize leading-[2.4rem] text-headingColor">
+                        School half term <br /> 1 week crash course
+                    </strong>
+                </div>
+
+                <div className="grid grid-cols-[1fr_auto] gap-y-[0.5] gap-x-4">
+                    <IconSwimming className="max-h-[2.4rem] max-w-[2.4rem]" />
+                    <span className="font-medium leading-[1.9rem] text-secondary">Trainer</span>
+                    <span className="col-span-1 col-start-2 font-medium leading-[1.9rem] text-secondary">
+                        Mehdi | Jhon
                     </span>
                 </div>
             </div>

@@ -1,10 +1,12 @@
 import HomeIcon from '@/icons/icon-home-white-outline.svg';
+import IconHomeYellow from '@/icons/icon-home-yellow-outline.svg';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 interface PropInterface {
     hamburgerActive: boolean;
     stickyNavActive: boolean;
+    closeMenu: () => void;
 }
 
 /**
@@ -13,7 +15,7 @@ interface PropInterface {
  * @param {PropInterface} { hamburgerActive }
  * @returns {JSX.Element}
  */
-const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Element => {
+const Navbar = ({ hamburgerActive, stickyNavActive, closeMenu }: PropInterface): JSX.Element => {
     const router = useRouter();
 
     return (
@@ -24,19 +26,24 @@ const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Elemen
                 }`}
             >
                 <ul className="flex h-full w-full flex-col items-center justify-center gap-12 bg-white py-16 shadow-lg md:flex-row md:justify-end md:bg-transparent md:py-0 md:shadow-none">
-                    <li className="grid w-full cursor-pointer place-items-center md:w-auto">
+                    <li className="grid w-full cursor-pointer place-items-center md:w-auto" onClick={closeMenu}>
                         <Link href="/" className="mx-auto md:-translate-y-1">
-                            <HomeIcon
-                                className={`${
-                                    (stickyNavActive && 'md:!fill-secondary') || ''
-                                } fill-secondary xl:fill-none ${router.pathname == '/' ? '!fill-primary' : ''}`}
-                            />
+                            {router.pathname == '/' ? (
+                                <IconHomeYellow />
+                            ) : (
+                                <HomeIcon
+                                    className={`${
+                                        (stickyNavActive && 'md:!fill-secondary') || ''
+                                    } fill-secondary xl:fill-none`}
+                                />
+                            )}
                         </Link>
                     </li>
                     <li
                         className={`w-full cursor-pointer whitespace-nowrap text-center underline-offset-8 transition-all hover:underline  md:w-auto ${
                             (stickyNavActive && 'md:hover:decoration-secondary') || 'hover:md:decoration-primary'
                         } ${router.pathname == '/about-us' ? '!underline !decoration-primary' : ''}`}
+                        onClick={closeMenu}
                     >
                         <Link
                             href="/about-us"
@@ -53,6 +60,7 @@ const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Elemen
                         className={`w-full cursor-pointer whitespace-nowrap text-center underline-offset-8 transition-all hover:underline  md:w-auto ${
                             (stickyNavActive && 'md:hover:decoration-secondary') || 'hover:md:decoration-primary'
                         } ${router.pathname == '/swimming-lesson-cost' ? '!underline !decoration-primary' : ''}`}
+                        onClick={closeMenu}
                     >
                         <Link
                             href="/swimming-lesson-cost"
@@ -69,6 +77,7 @@ const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Elemen
                         className={`w-full cursor-pointer whitespace-nowrap text-center underline-offset-8 transition-all hover:underline  md:w-auto ${
                             (stickyNavActive && 'md:hover:decoration-secondary') || 'hover:md:decoration-primary'
                         } ${router.pathname == '/contact-swimming-instructor' ? '!underline !decoration-primary' : ''}`}
+                        onClick={closeMenu}
                     >
                         <Link
                             href="/contact-swimming-instructor"
@@ -82,7 +91,7 @@ const Navbar = ({ hamburgerActive, stickyNavActive }: PropInterface): JSX.Elemen
                         </Link>
                     </li>
 
-                    <li>
+                    <li onClick={closeMenu}>
                         <Link href="/swimming-lesson-cost" className="">
                             <button
                                 type="button"

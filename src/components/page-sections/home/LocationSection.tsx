@@ -367,7 +367,7 @@ const LocationSection = (): JSX.Element => {
                     <img
                         src="/images/section-images/map.svg"
                         alt=""
-                        className="absolute top-0 left-0 z-[1] w-full -translate-y-2/4 -translate-x-[2rem]"
+                        className="absolute top-0 left-0 z-[1] w-full -translate-y-2/4"
                     />
                 </div>
             </Container>

@@ -70,7 +70,7 @@ const SliderSectionMobile = (): JSX.Element => {
     return (
         <div
             ref={sliderContainer}
-            className="relative grid grid-cols-1 grid-rows-[auto_1fr] gap-8 overflow-hidden px-12 md:mt-12 lg:hidden"
+            className="relative grid grid-cols-1 grid-rows-[auto_1fr] gap-8 overflow-hidden md:mt-12 md:px-12 lg:hidden"
         >
             <div
                 ref={sliderWrapper}
@@ -84,7 +84,7 @@ const SliderSectionMobile = (): JSX.Element => {
                 ))}
             </div>
 
-            <div className="flex items-center justify-center gap-[1.5rem]">
+            <div className="flex items-center justify-center gap-[1.5rem] overflow-x-scroll pl-16">
                 <span
                     onClick={slideRight}
                     className="cursor-pointer p-4 transition-all hover:scale-[1.3] hover:bg-grey20"

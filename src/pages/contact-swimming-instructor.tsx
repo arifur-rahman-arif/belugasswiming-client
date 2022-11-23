@@ -9,7 +9,10 @@ import { ContactSection } from '@/page-sections/contact';
  */
 const contact = (): JSX.Element => {
     return (
-        <Page title="Contact">
+        <Page
+            title="Parent and baby swimming lessons"
+            description="Swim lessons at your home or a swimming pool of your choice! Begin their water journey when they are young and give them a head start. contact us to learn more"
+        >
             <MastheadContact />
             <ContactSection />
         </Page>

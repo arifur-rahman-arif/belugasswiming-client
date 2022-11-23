@@ -9,6 +9,7 @@ import IconSwimmingLarge from '@/icons/icon-swimming-large.svg';
 import IconDoubleSwimmingLarge from '@/icons/icon-double-swimming-large.svg';
 import IconTimer from '@/icons/icon-timer.svg';
 import IconPurse from '@/icons/icon-purse.svg';
+import Link from 'next/link';
 
 const sliders = [
     // Item 1
@@ -33,12 +34,14 @@ const sliders = [
                 </span>
             </div>
 
-            <button
-                type="button"
-                className="mt-24 cursor-pointer rounded-[1.5rem] border-2 border-primary bg-primary px-8 py-6 text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-transparent md:py-[1.8rem] md:px-[2.4rem]"
-            >
-                Request a call back
-            </button>
+            <Link href="/contact-swimming-instructor/">
+                <button
+                    type="button"
+                    className="mt-24 cursor-pointer rounded-[1.5rem] border-2 border-primary bg-primary px-8 py-6 text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-transparent md:py-[1.8rem] md:px-[2.4rem]"
+                >
+                    Request a call back
+                </button>
+            </Link>
         </div>
     </div>,
     // Item 2
@@ -60,12 +63,14 @@ const sliders = [
                 </span>
             </div>
 
-            <button
-                type="button"
-                className="mt-24 cursor-pointer rounded-[1.5rem] border-2 border-primary bg-primary px-8 py-6 text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-transparent md:py-[1.8rem] md:px-[2.4rem]"
-            >
-                Request a call back
-            </button>
+            <Link href="/contact-swimming-instructor/">
+                <button
+                    type="button"
+                    className="mt-24 cursor-pointer rounded-[1.5rem] border-2 border-primary bg-primary px-8 py-6 text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-transparent md:py-[1.8rem] md:px-[2.4rem]"
+                >
+                    Request a call back
+                </button>
+            </Link>
         </div>
     </div>
 ];
@@ -128,7 +133,7 @@ const Prices = (): JSX.Element => {
                         <div className="mt-[3.5rem] flex flex-wrap items-start justify-start gap-[2.7rem]">
                             <div className="grid grid-cols-[1fr_auto] items-center gap-4">
                                 <img src="/images/section-images/mehdi-rounded.png" alt="" className="col-span-2" />
-                                <span>Mehdi Nessaie</span>
+                                <span>Mehdi Nesaie</span>
                                 <a
                                     href="#"
                                     className="text-[1.6rem] capitalize leading-[1.8rem] text-teal underline-offset-4 transition-all hover:underline hover:decoration-teal"
@@ -138,7 +143,7 @@ const Prices = (): JSX.Element => {
                             </div>
                             <div className="grid grid-cols-[1fr_auto] items-center gap-4">
                                 <img src="/images/section-images/jhon-rounded.png" alt="" className="col-span-2" />
-                                <span>John xxxxx</span>
+                                <span>John Magalhaes</span>
                                 <a
                                     href="#"
                                     className="text-[1.6rem] capitalize leading-[1.8rem] text-teal underline-offset-4 transition-all hover:underline hover:decoration-teal"
@@ -162,7 +167,7 @@ const Prices = (): JSX.Element => {
                     </div>
                 </div>
 
-                <HorizontalSlider sliders={sliders} />
+                <HorizontalSlider sliders={sliders} minMaxHeight="max-h-[86rem] md:min-h-[85rem]" />
             </Container>
         </Section>
     );

@@ -36,6 +36,15 @@ const Header = (): JSX.Element => {
         setHamburgerActive(!hamburgerActive);
     };
 
+    /**
+     * Close the menu
+     *
+     * @param {MouseEvent<HTMLElement>} e
+     */
+    const closeMenu = () => {
+        setHamburgerActive(false);
+    };
+
     return (
         <header
             ref={header}
@@ -59,7 +68,7 @@ const Header = (): JSX.Element => {
                     </Link>
                 </div>
 
-                <Navbar hamburgerActive={hamburgerActive} stickyNavActive={stickyNavActive} />
+                <Navbar hamburgerActive={hamburgerActive} stickyNavActive={stickyNavActive} closeMenu={closeMenu} />
 
                 <Hamburger hamburgerActive={hamburgerActive} toggleMenu={toggleMenu} />
             </div>

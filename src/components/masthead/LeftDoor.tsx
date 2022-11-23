@@ -83,9 +83,25 @@ const LeftDoor = (): JSX.Element => {
                             </div>
                         </li>
                     </ul> */}
+                    <div className="md:hidden">
+                        <Lottie
+                            options={lottieOptions}
+                            speed={1}
+                            title="Enter here"
+                            style={{ width: '25x', height: '100px' }}
+                        />
 
-                    <div className="absolute top-[40%] left-2/4 z-[1] -translate-x-2/4 md:top-2/4 ">
-                        <h5 className="mx-auto mt-20 max-w-[25.4rem] text-center font-medium capitalize text-white  md:mt-[7.8rem] md:text-headingColor">
+                        <button
+                            type="button"
+                            className={`mx-auto mt-4 block cursor-pointer rounded-[1.5rem] border-2 border-primary bg-transparent py-[1.8rem] px-[2.4rem] text-[1.6rem] font-bold uppercase leading-8 text-primary transition-all hover:bg-primary hover:text-secondary md:text-secondary `}
+                            onClick={openDoor}
+                        >
+                            Enter
+                        </button>
+                    </div>
+
+                    <div className="absolute top-[40%] left-2/4 z-[1] hidden -translate-x-2/4 md:top-2/4 md:block ">
+                        <h5 className="mx-auto mt-20 hidden max-w-[25.4rem] text-center font-medium capitalize text-white md:mt-[7.8rem]  md:block md:text-headingColor">
                             If you want to swimright enter here
                         </h5>
 

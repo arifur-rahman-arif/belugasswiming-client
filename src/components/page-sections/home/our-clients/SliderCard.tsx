@@ -14,10 +14,10 @@ interface PropInterface {
 const SliderCard = ({ index }: PropInterface): JSX.Element => {
     return (
         <div className="grid h-full w-full grid-cols-1 justify-items-start py-20 px-8 shadow-shadow1 md:px-16">
-            <div className="ml-[1.5rem] grid grid-cols-[auto_1fr] content-start gap-x-8 gap-y-[0.5rem]">
+            <div className="ml-[1.5rem] grid grid-cols-1 content-start gap-x-8 gap-y-[0.5rem] sm:grid-cols-[auto_1fr]">
                 <strong className="text-[1.6rem] font-bold leading-[1.8rem] text-headingColor">Mark Rise</strong>
                 <Icon5Star className="max-h-[2.2rem] max-w-[13rem]" />
-                <span className="col-span-2 text-[1.4rem] font-medium leading-[1.8rem]">Swimming Student</span>
+                <span className="text-[1.4rem] font-medium leading-[1.8rem] sm:col-span-2">Swimming Student</span>
             </div>
 
             <p className="mt-12 leading-[2.9rem]">

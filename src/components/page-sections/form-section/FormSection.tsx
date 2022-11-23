@@ -195,7 +195,7 @@ const FormSection = (): JSX.Element => {
                             {/* Form text area */}
                             <Description />
 
-                            <div className="flex items-center justify-start gap-[2.8rem] justify-self-end xl:col-span-2">
+                            <div className="flex flex-col items-center justify-start sm:flex-row sm:gap-[2.8rem] sm:justify-self-end xl:col-span-2">
                                 <span
                                     className="flex cursor-pointer items-center justify-center gap-4 px-8 py-12"
                                     onClick={resetForm}
