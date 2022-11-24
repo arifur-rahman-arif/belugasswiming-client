@@ -1,13 +1,42 @@
 import HomeIcon from '@/icons/icon-home-white-outline.svg';
 import IconHomeYellow from '@/icons/icon-home-yellow-outline.svg';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import LinkList from 'src/layouts/header/LinkList';
 
 interface PropInterface {
     hamburgerActive: boolean;
     stickyNavActive: boolean;
     closeMenu: () => void;
 }
+
+const navList = [
+    {
+        type: 'icon',
+        url: '/',
+        icon: <HomeIcon className="fill-secondary" />,
+        activeIcon: <IconHomeYellow />
+    },
+    {
+        type: 'text',
+        name: 'Who we are',
+        url: '/about-us'
+    },
+    {
+        type: 'text',
+        name: 'Pricing',
+        url: '/swimming-lesson-cost'
+    },
+    {
+        type: 'text',
+        name: 'Contact us',
+        url: '/contact-swimming-instructor'
+    },
+    {
+        type: 'button',
+        name: 'Calendar',
+        url: '/swimming-lesson-cost'
+    }
+];
 
 /**
  * Navbar component
@@ -26,83 +55,19 @@ const Navbar = ({ hamburgerActive, stickyNavActive, closeMenu }: PropInterface):
                 }`}
             >
                 <ul className="flex h-full w-full flex-col items-center justify-center gap-12 bg-white py-16 shadow-lg md:flex-row md:justify-end md:bg-transparent md:py-0 md:shadow-none">
-                    <li className="grid w-full cursor-pointer place-items-center md:w-auto" onClick={closeMenu}>
-                        <Link href="/" className="mx-auto md:-translate-y-1">
-                            {router.pathname == '/' ? (
-                                <IconHomeYellow />
-                            ) : (
-                                <HomeIcon
-                                    className={`${
-                                        (stickyNavActive && 'md:!fill-secondary') || ''
-                                    } fill-secondary xl:fill-none`}
-                                />
-                            )}
-                        </Link>
-                    </li>
-                    <li
-                        className={`w-full cursor-pointer whitespace-nowrap text-center underline-offset-8 transition-all hover:underline  md:w-auto ${
-                            (stickyNavActive && 'md:hover:decoration-secondary') || 'hover:md:decoration-primary'
-                        } ${router.pathname == '/about-us' ? '!underline !decoration-primary' : ''}`}
-                        onClick={closeMenu}
-                    >
-                        <Link
-                            href="/about-us"
-                            className={`${
-                                (stickyNavActive && 'md:!text-secondary') || ''
-                            } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary hover:text-primary md:text-white ${
-                                router.pathname == '/about-us' ? '!text-primary' : ''
-                            }`}
-                        >
-                            Who we are
-                        </Link>
-                    </li>
-                    <li
-                        className={`w-full cursor-pointer whitespace-nowrap text-center underline-offset-8 transition-all hover:underline  md:w-auto ${
-                            (stickyNavActive && 'md:hover:decoration-secondary') || 'hover:md:decoration-primary'
-                        } ${router.pathname == '/swimming-lesson-cost' ? '!underline !decoration-primary' : ''}`}
-                        onClick={closeMenu}
-                    >
-                        <Link
-                            href="/swimming-lesson-cost"
-                            className={`${
-                                (stickyNavActive && 'md:!text-secondary') || ''
-                            } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary hover:text-primary md:text-white ${
-                                router.pathname == '/swimming-lesson-cost' ? '!text-primary' : ''
-                            }`}
-                        >
-                            Pricing
-                        </Link>
-                    </li>
-                    <li
-                        className={`w-full cursor-pointer whitespace-nowrap text-center underline-offset-8 transition-all hover:underline  md:w-auto ${
-                            (stickyNavActive && 'md:hover:decoration-secondary') || 'hover:md:decoration-primary'
-                        } ${router.pathname == '/contact-swimming-instructor' ? '!underline !decoration-primary' : ''}`}
-                        onClick={closeMenu}
-                    >
-                        <Link
-                            href="/contact-swimming-instructor"
-                            className={`${
-                                (stickyNavActive && 'md:!text-secondary') || ''
-                            } inline-block w-full text-[1.6rem] font-medium leading-8 text-secondary hover:text-primary md:text-white ${
-                                router.pathname == '/contact-swimming-instructor' ? '!text-primary' : ''
-                            }`}
-                        >
-                            Contact us
-                        </Link>
-                    </li>
-
-                    <li onClick={closeMenu}>
-                        <Link href="/swimming-lesson-cost" className="">
-                            <button
-                                type="button"
-                                className={`cursor-pointer rounded-[1.5rem] border-2 border-primary bg-primary py-[1.8rem] px-[2.4rem] text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-transparent ${
-                                    (stickyNavActive && 'md:hover:text-secondary') || 'md:hover:text-primary'
-                                }`}
-                            >
-                                Calendar
-                            </button>
-                        </Link>
-                    </li>
+                    {navList.map((link, index) => (
+                        <LinkList
+                            key={index}
+                            icon={link.icon}
+                            activeIcon={link.activeIcon}
+                            type={link.type}
+                            name={link.name || ''}
+                            url={link.url}
+                            linkActive={router.pathname === link.url}
+                            stickyNavActive={stickyNavActive}
+                            closeMenu={closeMenu}
+                        />
+                    ))}
                 </ul>
             </div>
         </nav>

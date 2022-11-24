@@ -1,7 +1,8 @@
+import { LocationMap } from '@/components/Location';
 import { MastheadSwimmingLesson } from '@/components/masthead';
 import Page from '@/components/Page';
 import { OurClientsSection, FormSection } from '@/page-sections/home';
-import { Prices, Terms, Location } from '@/page-sections/swimming-lesson-cost';
+import { Prices, Terms } from '@/page-sections/swimming-lesson-cost';
 
 /**
  * Page 'swimming-lesson-cost
@@ -17,7 +18,7 @@ const SwimmingLessonCost = (): JSX.Element => {
             <MastheadSwimmingLesson />
             <Prices />
             <Terms />
-            <Location />
+            <LocationMap />
             <OurClientsSection sectionTitle="Clients words" description="Of our clients" />
             <FormSection />
         </Page>

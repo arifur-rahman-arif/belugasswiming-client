@@ -1,16 +1,19 @@
 import { Section } from '@/components/section';
-import { MouseEvent, useContext, useEffect, useRef, useState } from 'react';
+import { MouseEvent, useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { AppContextInterface, AppCtx } from '@/context/Context';
-import { MapContainer } from '@/components/Location';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import MapContainer from './MapContainer';
+
+interface LocationMapPropInterface {
+    sectionClass?: string;
+}
 
 /**
- * Location section component`
+ * LocationMap section component`
  *
  * @returns {*}  {JSX.Element}
  */
-const LocationSection = (): JSX.Element => {
-    const appCtx: AppContextInterface | null = useContext(AppCtx);
+const LocationMap = ({ sectionClass }: LocationMapPropInterface): JSX.Element => {
     const mapContainer = useRef<HTMLDivElement | null>(null);
     const query = gsap.utils.selector(mapContainer);
     const locationBox1 = useRef<HTMLDivElement | null>(null);
@@ -25,7 +28,9 @@ const LocationSection = (): JSX.Element => {
     });
 
     useEffect(() => {
-        if (!appCtx?.homePageDoorOpen) return;
+        if (typeof window !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+        }
 
         const sectionTimeline = gsap.timeline({
             scrollTrigger: {
@@ -33,6 +38,7 @@ const LocationSection = (): JSX.Element => {
                 start: 'top 75%'
             }
         });
+
         sectionTimeline.to(query('.location-pin '), {
             opacity: 1,
             y: 0,
@@ -40,7 +46,7 @@ const LocationSection = (): JSX.Element => {
             cursor: 'pointer',
             ease: 'Bounce.easeOut'
         });
-    }, [appCtx?.homePageDoorOpen]);
+    }, []);
 
     useEffect(() => {
         // Item 1
@@ -177,7 +183,7 @@ const LocationSection = (): JSX.Element => {
     };
 
     return (
-        <Section className="md:mt-[23.4rem]">
+        <Section className={`${sectionClass || ''}`}>
             <MapContainer
                 toggleMapLocation={toggleMapLocation}
                 closeMapLocation={closeMapLocation}
@@ -194,4 +200,4 @@ const LocationSection = (): JSX.Element => {
     );
 };
 
-export default LocationSection;
+export default LocationMap;

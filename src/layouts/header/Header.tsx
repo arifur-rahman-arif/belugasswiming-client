@@ -25,7 +25,7 @@ const Header = (): JSX.Element => {
                 setStickyNavActive(false);
             }
         });
-    }, []);
+    });
 
     /**
      * Toggle the state of the hamburger menu

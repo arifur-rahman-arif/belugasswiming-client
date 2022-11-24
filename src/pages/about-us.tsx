@@ -1,7 +1,8 @@
+import { LocationMap } from '@/components/Location';
 import { MastheadAboutUs } from '@/components/masthead';
 import Page from '@/components/Page';
 import { FormSection, OurClientsSection } from '@/components/page-sections/home';
-import { AboutUs, Location, Nowhere } from '@/page-sections/about-us';
+import { AboutUs, Nowhere } from '@/page-sections/about-us';
 
 /**
  * About us page
@@ -17,7 +18,7 @@ const aboutUs = (): any => {
             <MastheadAboutUs />
             <AboutUs />
             <Nowhere />
-            <Location />
+            <LocationMap sectionClass="md:mt-[23.4rem]" />
             <OurClientsSection sectionTitle="Clients words" description="Of our clients" />
             <FormSection />
         </Page>
