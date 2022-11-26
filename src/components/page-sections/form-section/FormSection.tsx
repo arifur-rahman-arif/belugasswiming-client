@@ -216,7 +216,7 @@ const FormSection = (): JSX.Element => {
                                     {appCtx?.formSubmitted && (
                                         <IconSpin className="h-8 w-8 animate-spin bg-transparent text-headingColor" />
                                     )}
-                                    Send my request
+                                    Submit Request
                                 </button>
                             </div>
                         </div>

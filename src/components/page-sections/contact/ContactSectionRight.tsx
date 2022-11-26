@@ -30,9 +30,9 @@ const ContactSectionRight = (): JSX.Element => {
                 </div>
             </div>
             <div className="flex flex-col items-start justify-start">
-                <span className="text-[2rem] font-bold leading-[2.4rem] text-headingColor">Phone</span>
+                <span className="text-[2rem] font-bold leading-[2.4rem] text-headingColor">Address</span>
                 <div className="mt-6 flex items-center justify-start gap-4">
-                    <IconPhone />
+                    <LocationPin />
                     <span className="text-[1.6rem] leading-[1.6rem]">Portland Road, London, W11 4LQ</span>
                 </div>
             </div>

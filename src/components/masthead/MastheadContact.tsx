@@ -13,10 +13,15 @@ const MastheadContact = (): JSX.Element => {
 
     return (
         <>
-            <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-contact.png')] bg-cover bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:bg-center md:pt-[13rem] 2xl:bg-[url('/images/masthead/masthead-contact-large.png')]">
+            <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-contact-mobile.png')] bg-cover bg-center bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:bg-[url('/images/masthead/masthead-contact.png')] md:bg-center md:pt-[13rem] 2xl:bg-[url('/images/masthead/masthead-contact-large.png')]">
                 <Container className="relative grid h-full grid-cols-1 grid-rows-[auto_auto_1fr] justify-items-start pt-[7.3rem]">
-                    <h1 className="mt-4 text-teal">Parent and baby swimming lessons</h1>
-                    <img src="/images/logos/contact-us.svg" className="mt-8" alt="Your swimright journey starts here" />
+                    <h1 className="mt-4 text-teal">
+                        We try to reply
+                        <br />
+                        within 24hours
+                    </h1>
+                    <img src="/images/logos/contact-us.svg" className="mt-8 hidden md:block" alt="Contact us" />
+                    <img src="/images/logos/contact-us-white.svg" className="mt-8 md:hidden" alt="Contact us" />
 
                     <div className="flex flex-col items-start justify-end gap-[1.5rem] justify-self-end pb-24 pt-24 md:pt-0">
                         <img

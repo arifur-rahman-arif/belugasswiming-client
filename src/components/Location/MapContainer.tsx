@@ -19,7 +19,7 @@ interface MapContainerPropsInterface {
  */
 const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapContainerPropsInterface, ref: any) => {
     return (
-        <Container className="grid grid-cols-1 items-center md:grid-cols-2">
+        <Container className="grid grid-cols-1 items-center bg-[url('/images/section-images/map.svg')] bg-contain bg-bottom bg-no-repeat sm:bg-[90%_auto] md:grid-cols-2 lg:bg-[70%_auto] xl:bg-none">
             <div>
                 <SwimmingIcon className="max-h-[3.7rem] max-w-[5.1rem]" />
                 <h2 className="mt-12 max-w-[38.8rem]">Locations</h2>
@@ -34,9 +34,12 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                 className="relative hidden min-h-[15rem] sm:min-h-[20rem] md:col-span-2 md:col-start-1 xl:block xl:min-h-[33rem]"
             >
                 {/* Item 1 */}
-                <div className="location-pin absolute top-2/4 left-[5%] z-[2] grid max-w-[calc(10vmin_+_6rem)] -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0 md:max-w-none">
+                <div className="location-pin absolute top-[30%] left-[10%] z-[2] grid max-w-[calc(10vmin_+_6rem)] -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0 md:max-w-none">
                     <IconSwimming />
-                    <span className="uppercase">SwimRight at Ascot</span>
+                    <span className="uppercase">
+                        SwimRight <br />
+                        at Ascot
+                    </span>
                     <span
                         className="relative col-span-2 justify-self-center"
                         onMouseEnter={(e) => toggleMapLocation(e, 'item-1')}
@@ -81,9 +84,13 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                 </div>
 
                 {/* Item 2 */}
-                <div className="top-35 location-pin absolute left-1/4 top-20 z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
+                <div className="location-pin absolute -top-[10%] left-[30%] z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
                     <IconSwimming />
-                    <span className="uppercase">SwimRight At windsor</span>
+                    <span className="uppercase">
+                        SwimRight
+                        <br />
+                        At windsor
+                    </span>
                     <span
                         className="col-span-2 justify-self-center"
                         onMouseEnter={(e) => toggleMapLocation(e, 'item-2')}
@@ -128,9 +135,13 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                 </div>
 
                 {/* Item 3 */}
-                <div className="location-pin absolute left-2/4 z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
+                <div className="location-pin absolute -top-[15%] right-[30%] z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
                     <IconSwimming />
-                    <span className="uppercase">Adult SwimRight At holand park</span>
+                    <span className="uppercase">
+                        Adult SwimRight At
+                        <br />
+                        holand park
+                    </span>
                     <span
                         className="col-span-2 justify-self-center"
                         onMouseEnter={(e) => toggleMapLocation(e, 'item-3')}
@@ -175,9 +186,13 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                 </div>
 
                 {/* Item 4 */}
-                <div className="location-pin absolute top-2/4 right-[5%] z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
+                <div className="location-pin absolute top-[15%] right-[10%] z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
                     <IconSwimming />
-                    <span className="uppercase">SwimRight at home</span>
+                    <span className="uppercase">
+                        SwimRight
+                        <br />
+                        at home
+                    </span>
                     <span
                         className="col-span-2 justify-self-center"
                         onMouseEnter={(e) => toggleMapLocation(e, 'item-4')}
@@ -229,11 +244,11 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
             </div>
 
             <div className="relative min-h-[calc(50vmin_+_2rem)] sm:min-h-[40rem] md:col-span-2 md:col-start-1 md:min-h-[53rem] lg:min-h-[70rem] xl:hidden">
-                <img
+                {/* <img
                     src="/images/section-images/map.svg"
                     alt=""
                     className="absolute top-0 left-0 z-[1] w-full -translate-y-2/4"
-                />
+                /> */}
             </div>
         </Container>
     );
