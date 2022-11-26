@@ -41,7 +41,8 @@ const LeftDoor = (): JSX.Element => {
 
                     <h2 className="hidden">SwimRight</h2>
 
-                    <img src="/images/logos/swimright.svg" alt="swimright" className="mt-8" />
+                    <img src="/images/logos/swimright.svg" alt="swimright" className="mt-8 hidden md:block" />
+                    <img src="/images/logos/swimright-white.svg" alt="swimright" className="mt-8 md:hidden" />
 
                     <p className="mt-12 w-full max-w-[37rem] text-left text-white md:text-secondary xl:-mt-12">
                         There is nothing more convenient and practical than having a swim session at your home pool with
