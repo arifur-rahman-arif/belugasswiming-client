@@ -37,7 +37,7 @@ const LinkList = ({
     stickyNavActive
 }: LinkListPropsInterface): any => {
     let linkClassNames =
-        'inline-block w-full text-[1.6rem] font-medium leading-8 hover:text-primary text-secondary lg:text-white';
+        'inline-block w-full text-[1.6rem] font-medium leading-8 hover:text-primary text-secondary md:text-white';
 
     if (linkActive) {
         linkClassNames = 'inline-block w-full text-[1.6rem] font-medium leading-8 hover:text-primary text-primary';

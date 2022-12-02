@@ -1,5 +1,5 @@
-import { RequestCallbackButton } from '@/components/button';
 import { Container } from '@/components/container';
+import { RequestCallbackButton } from '@/components/button';
 import { useEffect } from 'react';
 
 /**
@@ -14,20 +14,20 @@ const MastheadAboutUs = (): JSX.Element => {
 
     return (
         <>
-            <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-about-us.png')] bg-cover bg-right bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:bg-center md:pt-[13rem] 2xl:bg-[url('/images/masthead/masthead-about-us-large.png')]">
+            <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-about-us.png')] bg-cover bg-center bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:bg-center md:pt-[13rem] 2xl:bg-[url('/images/masthead/masthead-about-us-large.png')]">
                 <Container className="relative grid h-full grid-cols-1 justify-items-start pt-[7.3rem]">
                     <h1 className="mt-4 text-teal">private swimming instructors</h1>
                     <img
                         src="/images/logos/all-about-swimright.svg"
-                        className="mt-8 hidden md:block"
+                        className="mt-8"
                         alt="Your swimright journey starts here"
                     />
 
-                    <img
+                    {/* <img
                         src="/images/logos/all-about-swimright-white.svg"
                         className="mt-8 md:hidden"
                         alt="Your swimright journey starts here"
-                    />
+                    /> */}
 
                     <RequestCallbackButton />
 

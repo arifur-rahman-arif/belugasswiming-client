@@ -1,12 +1,13 @@
-import { Container } from '@/components/container';
-import { Section } from '@/components/section';
 import { AppContextInterface, AppCtx } from '@/context/Context';
-import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
-import { useContext, useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import IconSwimming from '@/icons/icon-swimming-black.svg';
-import IconCalendar from '@/icons/icon-calender-outline.svg';
+import { useContext, useEffect, useRef } from 'react';
+
+import { Container } from '@/components/container';
 import { HorizontalSlider } from '@/components/slider';
+import IconCalendar from '@/icons/icon-calender-outline.svg';
+import IconSwimming from '@/icons/icon-swimming-black.svg';
+import { Section } from '@/components/section';
+import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
+import { gsap } from 'gsap';
 
 const sliders = [
     // Item 1
@@ -144,8 +145,8 @@ const TermsSection = () => {
             <Container className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-y-12">
                 <div className="col-span-2 col-start-1">
                     <SwimmingIcon className="max-h-[3.7rem] max-w-[5.1rem]" />
-                    <h2 className="mt-12">Classes and Terms</h2>
-                    <h3 className="mt-4 text-teal">All Age and levels swimming lessons</h3>
+                    <h2 className="mt-12">CLASSES AND TERM DATES</h2>
+                    <h3 className="mt-4 text-teal">SWIMMING LESSONS FOR ALL AGES AND LEVELS</h3>
                 </div>
 
                 <div className="col-span-2 flex items-start justify-start md:col-span-1">

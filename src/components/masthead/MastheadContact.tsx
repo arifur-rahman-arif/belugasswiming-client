@@ -20,8 +20,8 @@ const MastheadContact = (): JSX.Element => {
                         <br />
                         within 24hours
                     </h1>
-                    <img src="/images/logos/contact-us.svg" className="mt-8 hidden md:block" alt="Contact us" />
-                    <img src="/images/logos/contact-us-white.svg" className="mt-8 md:hidden" alt="Contact us" />
+                    <img src="/images/logos/contact-us.svg" className="mt-8" alt="Contact us" />
+                    {/* <img src="/images/logos/contact-us-white.svg" className="mt-8 md:hidden" alt="Contact us" /> */}
 
                     <div className="flex flex-col items-start justify-end gap-[1.5rem] justify-self-end pb-24 pt-24 md:pt-0">
                         <img

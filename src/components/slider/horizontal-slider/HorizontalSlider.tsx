@@ -1,8 +1,9 @@
-import IconTop from '@/images/icons/icon-angle-top.svg';
-import IconDown from '@/images/icons/icon-angle-down.svg';
 import { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
+
+import IconDown from '@/images/icons/icon-angle-down.svg';
+import IconTop from '@/images/icons/icon-angle-top.svg';
 import SliderCard from './SliderCard';
+import { gsap } from 'gsap';
 
 interface PropInterface {
     sliders: JSX.Element[];
@@ -112,22 +113,28 @@ const HorizontalSlider = ({ sliders, minMaxHeight }: PropInterface): JSX.Element
                         </span>
                     )}
 
-                    <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">01</span>
+                    {sliders.length > 2 ? (
+                        <>
+                            <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">01</span>
 
-                    <div className="flex flex-col items-center justify-center gap-4">
-                        {sliders.map((item, index) => (
-                            <div
-                                key={index}
-                                className={`h-[2rem] w-[0.4rem] transition-all duration-500 ${
-                                    (activeIndexes.includes(index) && 'w-[0.5rem] bg-black') || 'bg-grey40'
-                                }`}
-                            ></div>
-                        ))}
-                    </div>
+                            <div className="flex flex-col items-center justify-center gap-4">
+                                {sliders.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className={`h-[2rem] w-[0.4rem] transition-all duration-500 ${
+                                            (activeIndexes.includes(index) && 'w-[0.5rem] bg-black') || 'bg-grey40'
+                                        }`}
+                                    ></div>
+                                ))}
+                            </div>
 
-                    <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">
-                        {sliders.length.toString().padStart(2, '0')}
-                    </span>
+                            <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">
+                                {sliders.length.toString().padStart(2, '0')}
+                            </span>
+                        </>
+                    ) : (
+                        <></>
+                    )}
 
                     {sliders.length <= 2 ? (
                         <></>

@@ -1,7 +1,7 @@
 import { Container } from '@/components/container';
-import IconTelephone from '@/images/icons/icon-telephone-outline.svg';
 import IconMail from '@/images/icons/icon-mail-outline.svg';
 import IconMapPin from '@/images/icons/icon-map-pin-outline.svg';
+import IconTelephone from '@/images/icons/icon-telephone-outline.svg';
 
 /**
  * Footer container
@@ -18,8 +18,10 @@ const Footer = () => {
             />
 
             <Container className="grid grid-cols-1 justify-items-center pt-32 pb-16">
-                <h3 className="mt-4 normal-case text-primary">Get in touch ..</h3>
-                <h2 className="mt-[1.5rem] max-w-[38.8rem] text-white">Contact</h2>
+                <h3 className="mt-4 text-[2rem] font-extrabold capitalize leading-[2.4rem] text-primary">
+                    Get in touch ...
+                </h3>
+                <h2 className="mt-[1.5rem] max-w-[38.8rem] text-[3.2rem] leading-[3.8rem] text-white">Contact</h2>
 
                 <div className="mt-24 grid grid-cols-[auto_1fr] items-center justify-items-start gap-x-4 gap-y-8">
                     <IconTelephone className="max-h-[2.4rem] max-w-[2.4rem]" />
@@ -41,7 +43,7 @@ const Footer = () => {
                 </div>
 
                 <p className="mt-12 text-[1.4rem] leading-[1.8rem] text-white">
-                    Copy Right © belugaswimmingacademy 2022 | All Right Reserved
+                    Copy Right © belugaswimmingacademy {new Date(Date.now()).getFullYear()} | All Right Reserved
                 </p>
             </Container>
         </footer>

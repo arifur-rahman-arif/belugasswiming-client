@@ -1,11 +1,12 @@
+import { useEffect, useRef } from 'react';
+
 import { Container } from '@/components/container';
-import { Section } from '@/components/section';
-import { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
 import { HorizontalSlider } from '@/components/slider';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import IconSwimming from '@/icons/icon-swimming-black.svg';
 import IconCalendar from '@/icons/icon-calender-outline.svg';
+import IconSwimming from '@/icons/icon-swimming-black.svg';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { Section } from '@/components/section';
+import { gsap } from 'gsap';
 
 const sliders = [
     // Item 1
@@ -144,7 +145,7 @@ const Terms = (): JSX.Element => {
         <Section defaultClassName="mt-12">
             <Container className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-y-12">
                 <span className="col-span-2 text-[2.4rem] font-bold uppercase leading-[2.8rem] text-headingColor">
-                    Terms
+                    Term Dates
                 </span>
 
                 <div className="col-span-2 grid h-full grid-cols-[auto_1fr] grid-rows-[1fr_auto] md:col-span-1">
