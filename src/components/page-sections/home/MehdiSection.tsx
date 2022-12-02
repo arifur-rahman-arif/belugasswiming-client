@@ -141,7 +141,14 @@ const MehdiSection = (): JSX.Element => {
                         </div>
 
                         <div className="relative max-h-[52.7rem] max-w-[58.8rem] self-end md:ml-16 xl:ml-[7.5rem]">
-                            <img src="/images/section-images/mehdi.webp" className="relative z-[2]" ref={imgElement} />
+                            <img
+                                src="/images/section-images/mehdi.webp"
+                                className="relative z-[2]"
+                                ref={imgElement}
+                                alt="Mehdi"
+                                width={588}
+                                height={527}
+                            />
                             <span
                                 ref={sportElement}
                                 style={{ writingMode: 'vertical-lr', WebkitTextStroke: '1px #000' }}

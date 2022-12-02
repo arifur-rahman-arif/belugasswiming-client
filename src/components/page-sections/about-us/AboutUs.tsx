@@ -106,6 +106,8 @@ const AboutUs = () => {
                             src="/images/section-images/person-swimming-underwater.webp"
                             className="relative translate-x-[7rem] opacity-0 md:-translate-x-0 xl:min-h-[46.7rem]"
                             ref={imgElement}
+                            width={765}
+                            height={467}
                         />
                     </div>
                     <span

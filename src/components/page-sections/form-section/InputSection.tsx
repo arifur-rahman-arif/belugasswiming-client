@@ -1,5 +1,6 @@
 import { AppContextInterface, AppCtx } from '@/context/Context';
 import { ChangeEvent, useContext, useEffect, useRef } from 'react';
+
 import { gsap } from 'gsap';
 
 /**
@@ -105,7 +106,7 @@ const InputSection = (): JSX.Element => {
                 <div className="w-full">
                     <input
                         type="email"
-                        id="email"
+                        id="email1"
                         value={appCtx?.contactEmail}
                         onChange={(e: ChangeEvent<HTMLInputElement>) =>
                             appCtx?.setContactEmail(e.target.value as string)

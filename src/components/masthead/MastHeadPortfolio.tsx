@@ -50,6 +50,8 @@ const MastHeadPortfolio = (): JSX.Element => {
                         src="/images/logos/your-swimright-journey.svg"
                         className="mt-8"
                         alt="Your swimright journey starts here"
+                        width={584}
+                        height={116}
                     />
 
                     {/* <img
@@ -65,6 +67,8 @@ const MastHeadPortfolio = (): JSX.Element => {
                             src="/images/logos/logo-bsa.svg"
                             alt="BSA"
                             className="max-h-[5.3rem] max-w-[13rem] xl:max-w-[15.2rem]"
+                            width={152}
+                            height={53}
                         />
                         <h3 className="text-teal md:text-white">beluga swimming academy</h3>
                     </div>

@@ -159,6 +159,8 @@ const Terms = (): JSX.Element => {
                             className="mx-auto object-contain"
                             src="/images/section-images/swimming-tutorial.webp"
                             alt=""
+                            width={534}
+                            height={440}
                         />
                     </div>
                 </div>

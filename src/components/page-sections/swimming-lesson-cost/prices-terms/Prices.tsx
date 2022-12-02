@@ -125,6 +125,8 @@ const Prices = (): JSX.Element => {
                             className="mx-auto h-[17.7rem] w-[18rem]"
                             src="/images/section-images/person-ready-to-jump.webp"
                             alt=""
+                            width={180}
+                            height={177}
                         />
 
                         <span className="mt-[3.5rem] text-[3.2rem] font-bold uppercase leading-[3.8rem] text-headingColor">
@@ -133,7 +135,13 @@ const Prices = (): JSX.Element => {
 
                         <div className="mt-[3.5rem] flex flex-wrap items-start justify-start gap-[2.7rem]">
                             <div className="grid grid-cols-[1fr_auto] items-center gap-4">
-                                <img src="/images/section-images/mehdi-rounded.webp" alt="" className="col-span-2" />
+                                <img
+                                    src="/images/section-images/mehdi-rounded.webp"
+                                    alt=""
+                                    className="col-span-2"
+                                    width={80}
+                                    height={80}
+                                />
                                 <span>Mehdi Nesaie</span>
                                 <a
                                     href="#"
@@ -143,7 +151,13 @@ const Prices = (): JSX.Element => {
                                 </a>
                             </div>
                             <div className="grid grid-cols-[1fr_auto] items-center gap-4">
-                                <img src="/images/section-images/jhon-rounded.webp" alt="" className="col-span-2" />
+                                <img
+                                    src="/images/section-images/jhon-rounded.webp"
+                                    alt=""
+                                    className="col-span-2"
+                                    width={80}
+                                    height={80}
+                                />
                                 <span>John Magalhaes</span>
                                 <a
                                     href="#"
@@ -159,10 +173,12 @@ const Prices = (): JSX.Element => {
                         </span>
 
                         <div className="mt-12 flex flex-wrap items-center justify-start gap-x-24 gap-y-12">
-                            <img src="/images/logos/swim-england.webp" alt="swim-england" />
+                            <img src="/images/logos/swim-england.webp" alt="swim-england" width={171} height={54} />
                             <img
                                 src="/images/logos/swimming-teachers-association.webp"
                                 alt="swimming-teachers-association"
+                                width={163}
+                                height={73}
                             />
                         </div>
                     </div>

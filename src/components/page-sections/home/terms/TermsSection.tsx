@@ -156,6 +156,8 @@ const TermsSection = () => {
                             className="h-full w-full"
                             src="/images/section-images/person-getting-out-of-pool.webp"
                             alt=""
+                            width={604}
+                            height={859}
                         />
                     </div>
                 </div>

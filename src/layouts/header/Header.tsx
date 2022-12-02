@@ -65,19 +65,25 @@ const Header = (): JSX.Element => {
                             <img
                                 className={`w-[12rem] object-contain md:h-[8.2rem] md:w-[16rem]`}
                                 src="/images/logos/logo-dark.svg"
-                                alt=""
+                                alt="SwimRight"
+                                width={161}
+                                height={82}
                             />
                         ) : (
                             <>
                                 <img
                                     className={`hidden w-[12rem] object-contain md:block md:h-[8.2rem] md:w-[16rem]`}
                                     src="/images/logos/logo.svg"
-                                    alt=""
+                                    alt="SwimRight"
+                                    width={161}
+                                    height={82}
                                 />
                                 <img
                                     className={`w-[12rem] object-contain md:hidden md:h-[8.2rem] md:w-[16rem]`}
                                     src="/images/logos/logo-dark.svg"
-                                    alt=""
+                                    alt="SwimRight"
+                                    width={161}
+                                    height={82}
                                 />
                             </>
                         )}

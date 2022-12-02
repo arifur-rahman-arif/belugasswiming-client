@@ -147,7 +147,14 @@ const JhonSection = (): JSX.Element => {
                         </div>
 
                         <div className="relative max-h-[52.7rem] max-w-[58.8rem] self-end md:mr-16 xl:mr-[7.5rem]">
-                            <img src="/images/section-images/jhon.webp" className="relative z-[2]" ref={imgElement} />
+                            <img
+                                src="/images/section-images/jhon.webp"
+                                className="relative z-[2]"
+                                ref={imgElement}
+                                alt="Jhon"
+                                width={588}
+                                height={527}
+                            />
                             <span
                                 ref={sportElement}
                                 style={{ writingMode: 'vertical-lr', WebkitTextStroke: '1px #000' }}

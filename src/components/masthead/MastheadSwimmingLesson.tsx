@@ -21,6 +21,8 @@ const MastheadSwimmingLesson = (): JSX.Element => {
                         src="/images/logos/prices-that-make-you-swim.svg"
                         className="mt-8"
                         alt="Prices that make you Swim"
+                        width={460}
+                        height={116}
                     />
                     {/* <img
                         src="/images/logos/prices-that-make-you-swim-white.svg"
@@ -35,6 +37,8 @@ const MastheadSwimmingLesson = (): JSX.Element => {
                             src="/images/logos/logo-bsa.svg"
                             alt="BSA"
                             className="max-h-[5.3rem] max-w-[13rem] xl:max-w-[15.2rem]"
+                            width={152}
+                            height={53}
                         />
                         <h3 className="text-teal md:text-white">beluga swimming academy</h3>
                     </div>

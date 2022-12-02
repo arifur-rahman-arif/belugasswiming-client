@@ -6,6 +6,7 @@ import IconVideoPlay from '@/images/icons/video-play.svg';
 import { Section } from '@/components/section';
 import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
 import { gsap } from 'gsap';
+
 /**
  * Learn from best component
  *
@@ -73,6 +74,9 @@ const LearnFromBest = () => {
                                 src="/images/section-images/person-swimming-2.webp"
                                 className="xl:min-h-[42.6rem]"
                                 ref={imgElement}
+                                alt=""
+                                width={632}
+                                height={408}
                             />
                             <span className="absolute right-[12.9rem] bottom-[4.3rem] z-[2] grid h-[6.5rem] w-[6.5rem] cursor-pointer place-items-center rounded-full bg-primary">
                                 <IconVideoPlay className="translate-x-[0.2rem]" />

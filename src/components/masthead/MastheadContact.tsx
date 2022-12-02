@@ -20,7 +20,7 @@ const MastheadContact = (): JSX.Element => {
                         <br />
                         within 24hours
                     </h1>
-                    <img src="/images/logos/contact-us.svg" className="mt-8" alt="Contact us" />
+                    <img src="/images/logos/contact-us.svg" className="mt-8" alt="Contact us" width={361} height={58} />
                     {/* <img src="/images/logos/contact-us-white.svg" className="mt-8 md:hidden" alt="Contact us" /> */}
 
                     <div className="flex flex-col items-start justify-end gap-[1.5rem] justify-self-end pb-24 pt-24 md:pt-0">
@@ -28,6 +28,8 @@ const MastheadContact = (): JSX.Element => {
                             src="/images/logos/logo-bsa.svg"
                             alt="BSA"
                             className="max-h-[5.3rem] max-w-[13rem] xl:max-w-[15.2rem]"
+                            width={152}
+                            height={53}
                         />
                         <h3 className="text-teal md:text-white">beluga swimming academy</h3>
                     </div>

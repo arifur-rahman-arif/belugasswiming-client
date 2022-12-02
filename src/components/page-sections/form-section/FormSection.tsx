@@ -1,14 +1,15 @@
-import { Container } from '@/components/container';
-import { Section } from '@/components/section';
 import { AppContextInterface, AppCtx } from '@/context/Context';
 import { FormEvent, useContext, useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import PreferredFormOfContact from './PreferredFormOfContact';
-import InputSection from './InputSection';
+
+import { BELUGA_REST_URL } from '@/utils/constant';
+import { Container } from '@/components/container';
 import Description from './Description';
 import IconRefresh from '@/images/icons/icon-refresh.svg';
-import { BELUGA_REST_URL } from '@/utils/constant';
 import IconSpin from '@/icons/icon-spin.svg';
+import InputSection from './InputSection';
+import PreferredFormOfContact from './PreferredFormOfContact';
+import { Section } from '@/components/section';
+import { gsap } from 'gsap';
 
 /**
  * Form component
@@ -147,6 +148,9 @@ const FormSection = (): JSX.Element => {
                             <img
                                 src="/images/section-images/front-swimmer.svg"
                                 className="max-h-[12.1rem] w-full max-w-[32.7rem]"
+                                alt=""
+                                width={327}
+                                height={121}
                             />
                             {/* <Image src="/images/section-images/front-swimmer.svg" alt="" width={327} height={120} /> */}
                             <h2 className="max-w-[32.7rem]">Ready to SwimRight?</h2>

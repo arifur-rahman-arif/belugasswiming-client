@@ -15,6 +15,8 @@ const Footer = () => {
                 src="/images/section-images/footer-bg.webp"
                 className="absolute top-0 right-0 z-[1] h-full max-h-[46.7rem] w-full max-w-[68.3rem] md:-translate-y-2/4"
                 alt=""
+                width={683}
+                height={467}
             />
 
             <Container className="grid grid-cols-1 justify-items-center pt-32 pb-16">

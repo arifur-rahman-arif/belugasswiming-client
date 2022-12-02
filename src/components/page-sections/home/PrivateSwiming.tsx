@@ -72,6 +72,9 @@ const PrivateSwiming = () => {
                             src="/images/section-images/person-swiming.webp"
                             className="xl:min-h-[42.6rem]"
                             ref={imgElement}
+                            alt=""
+                            width={605}
+                            height={426}
                         />
                         <span
                             ref={sportElement}

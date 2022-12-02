@@ -40,7 +40,7 @@ const LeftDoor = (): JSX.Element => {
                 <div className="h-full bg-[url('/images/masthead/masthead-home-bg.webp')] bg-cover bg-no-repeat px-8 pt-20 md:h-auto md:bg-none md:pt-[21rem] xl:px-0">
                     <h1 className="text-teal">Private swimming lessons</h1>
 
-                    <img src="/images/logos/swimright.svg" alt="swimright" className="mt-8" />
+                    <img src="/images/logos/swimright.svg" alt="swimright" className="mt-8" width={525} height={58} />
                     {/* <img src="/images/logos/swimright-white.svg" alt="swimright" className="mt-8 md:hidden" /> */}
 
                     <p className="mt-12 w-full max-w-[37rem] text-left text-white">

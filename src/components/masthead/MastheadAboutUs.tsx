@@ -20,7 +20,9 @@ const MastheadAboutUs = (): JSX.Element => {
                     <img
                         src="/images/logos/all-about-swimright.svg"
                         className="mt-8"
-                        alt="Your swimright journey starts here"
+                        alt="All about swimright"
+                        width={341}
+                        height={118}
                     />
 
                     {/* <img
@@ -36,6 +38,8 @@ const MastheadAboutUs = (): JSX.Element => {
                             src="/images/logos/logo-bsa.svg"
                             alt="BSA"
                             className="max-h-[5.3rem] max-w-[13rem] xl:max-w-[15.2rem]"
+                            width={152}
+                            height={53}
                         />
                         <h3 className="text-teal md:text-white">beluga swimming academy</h3>
                     </div>

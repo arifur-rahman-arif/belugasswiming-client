@@ -26,7 +26,13 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                 <h3 className="mt-4 text-teal">We bring it to your home</h3>
             </div>
             <div className="grid place-items-center">
-                <img className="object-cover" src="/images/section-images/black-man-with-glass.webp" alt="" />
+                <img
+                    className="object-cover"
+                    src="/images/section-images/black-man-with-glass.webp"
+                    alt=""
+                    width={529}
+                    height={566}
+                />
             </div>
 
             <div
@@ -45,7 +51,13 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                         onMouseEnter={(e) => toggleMapLocation(e, 'item-1')}
                         onMouseLeave={(e) => closeMapLocation(e, 'item-1')}
                     >
-                        <img src="/images/icons/icon-location-pin-yellow.svg" className="w-full" alt="" />
+                        <img
+                            src="/images/icons/icon-location-pin-yellow.svg"
+                            className="w-full"
+                            alt=""
+                            width={53}
+                            height={82}
+                        />
                     </span>
 
                     {/* Full Location */}
@@ -58,6 +70,8 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 src="/images/section-images/location-ascot.webp"
                                 alt="Ascot"
                                 className="h-full w-full"
+                                width={488}
+                                height={190}
                             />
                         </div>
 
@@ -70,11 +84,21 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 <p className="">At your residence or the swimming pool of your choice</p>
                                 <div className="flex items-start justify-start gap-[2.7rem] ">
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/mehdi-rounded.webp" alt="" />
+                                        <img
+                                            src="/images/section-images/mehdi-rounded.webp"
+                                            alt=""
+                                            width={80}
+                                            height={80}
+                                        />
                                         <span>Mehdi</span>
                                     </div>
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/jhon-rounded.webp" alt="" />
+                                        <img
+                                            src="/images/section-images/jhon-rounded.webp"
+                                            alt=""
+                                            width={80}
+                                            height={80}
+                                        />
                                         <span>Jhon</span>
                                     </div>
                                 </div>
@@ -96,7 +120,13 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                         onMouseEnter={(e) => toggleMapLocation(e, 'item-2')}
                         onMouseLeave={(e) => toggleMapLocation(e, 'item-2')}
                     >
-                        <img src="/images/icons/icon-location-pin-yellow.svg" className="w-full" alt="" />
+                        <img
+                            src="/images/icons/icon-location-pin-yellow.svg"
+                            className="w-full"
+                            alt=""
+                            height={82}
+                            width={53}
+                        />
                     </span>
 
                     {/* Full Location */}
@@ -109,6 +139,8 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 src="/images/section-images/location-windsor.webp"
                                 alt="Ascot"
                                 className="h-full w-full"
+                                width={488}
+                                height={190}
                             />
                         </div>
 
@@ -121,11 +153,21 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 <p className="">At your residence or the swimming pool of your choice</p>
                                 <div className="flex items-start justify-start gap-[2.7rem] ">
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/mehdi-rounded.webp" alt="" />
+                                        <img
+                                            src="/images/section-images/mehdi-rounded.webp"
+                                            alt=""
+                                            width={80}
+                                            height={80}
+                                        />
                                         <span>Mehdi</span>
                                     </div>
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/jhon-rounded.webp" alt="" />
+                                        <img
+                                            src="/images/section-images/jhon-rounded.webp"
+                                            alt=""
+                                            width={80}
+                                            height={80}
+                                        />
                                         <span>Jhon</span>
                                     </div>
                                 </div>
@@ -198,7 +240,13 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                         onMouseEnter={(e) => toggleMapLocation(e, 'item-4')}
                         onMouseLeave={(e) => closeMapLocation(e, 'item-4')}
                     >
-                        <img src="/images/icons/icon-location-pin-yellow.svg" className="w-full" alt="" />
+                        <img
+                            src="/images/icons/icon-location-pin-yellow.svg"
+                            className="w-full"
+                            alt=""
+                            height={82}
+                            width={53}
+                        />
                     </span>
 
                     {/* Full Location */}
@@ -211,6 +259,8 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 src="/images/section-images/location-london.webp"
                                 alt="Ascot"
                                 className="h-full w-full"
+                                width={488}
+                                height={190}
                             />
                         </div>
 
@@ -223,11 +273,11 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 <p className="">At your residence or the swimming pool of your choice</p>
                                 <div className="flex items-start justify-start gap-[2.7rem] ">
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/mehdi-rounded.webp" alt="" />
+                                        <img src="/images/section-images/mehdi-rounded.webp" alt="" height={82} />
                                         <span>Mehdi</span>
                                     </div>
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/jhon-rounded.webp" alt="" />
+                                        <img src="/images/section-images/jhon-rounded.webp" alt="" width={53} />
                                         <span>Jhon</span>
                                     </div>
                                 </div>
@@ -240,6 +290,8 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                     src="/images/section-images/road.svg"
                     className="absolute top-0 left-0 z-[1] w-full -translate-y-2/4 -translate-x-[2rem]"
                     alt=""
+                    width={1125}
+                    height={300}
                 />
             </div>
 
