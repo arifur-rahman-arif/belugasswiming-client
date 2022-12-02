@@ -1,15 +1,16 @@
+import { useEffect, useRef } from 'react';
+
 import { Container } from '@/components/container';
+import { HorizontalSlider } from '@/components/slider';
+import IconDoubleSwimmingLarge from '@/icons/icon-double-swimming-large.svg';
+import IconPurse from '@/icons/icon-purse.svg';
+import IconSwimmingLarge from '@/icons/icon-swimming-large.svg';
+import IconTimer from '@/icons/icon-timer.svg';
+import Link from 'next/link';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Section } from '@/components/section';
-import { useRef, useEffect } from 'react';
 import SwimmingIcon from '@/icons/icon-swiming-yellow.svg';
 import { gsap } from 'gsap';
-import { HorizontalSlider } from '@/components/slider';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import IconSwimmingLarge from '@/icons/icon-swimming-large.svg';
-import IconDoubleSwimmingLarge from '@/icons/icon-double-swimming-large.svg';
-import IconTimer from '@/icons/icon-timer.svg';
-import IconPurse from '@/icons/icon-purse.svg';
-import Link from 'next/link';
 
 const sliders = [
     // Item 1
@@ -122,7 +123,7 @@ const Prices = (): JSX.Element => {
                     >
                         <img
                             className="mx-auto h-[17.7rem] w-[18rem]"
-                            src="/images/section-images/person-ready-to-jump.png"
+                            src="/images/section-images/person-ready-to-jump.webp"
                             alt=""
                         />
 
@@ -132,7 +133,7 @@ const Prices = (): JSX.Element => {
 
                         <div className="mt-[3.5rem] flex flex-wrap items-start justify-start gap-[2.7rem]">
                             <div className="grid grid-cols-[1fr_auto] items-center gap-4">
-                                <img src="/images/section-images/mehdi-rounded.png" alt="" className="col-span-2" />
+                                <img src="/images/section-images/mehdi-rounded.webp" alt="" className="col-span-2" />
                                 <span>Mehdi Nesaie</span>
                                 <a
                                     href="#"
@@ -142,7 +143,7 @@ const Prices = (): JSX.Element => {
                                 </a>
                             </div>
                             <div className="grid grid-cols-[1fr_auto] items-center gap-4">
-                                <img src="/images/section-images/jhon-rounded.png" alt="" className="col-span-2" />
+                                <img src="/images/section-images/jhon-rounded.webp" alt="" className="col-span-2" />
                                 <span>John Magalhaes</span>
                                 <a
                                     href="#"
@@ -158,9 +159,9 @@ const Prices = (): JSX.Element => {
                         </span>
 
                         <div className="mt-12 flex flex-wrap items-center justify-start gap-x-24 gap-y-12">
-                            <img src="/images/logos/swim-england.png" alt="swim-england" />
+                            <img src="/images/logos/swim-england.webp" alt="swim-england" />
                             <img
-                                src="/images/logos/swimming-teachers-association.png"
+                                src="/images/logos/swimming-teachers-association.webp"
                                 alt="swimming-teachers-association"
                             />
                         </div>

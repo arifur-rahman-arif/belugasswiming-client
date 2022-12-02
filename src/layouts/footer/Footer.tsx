@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <footer className="relative mt-24 w-full bg-headingColor sm:mt-36 md:mt-[30rem]">
             <img
-                src="/images/section-images/footer-bg.png"
+                src="/images/section-images/footer-bg.webp"
                 className="absolute top-0 right-0 z-[1] h-full max-h-[46.7rem] w-full max-w-[68.3rem] md:-translate-y-2/4"
                 alt=""
             />

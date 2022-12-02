@@ -154,7 +154,7 @@ const TermsSection = () => {
                     <div ref={imageElement} className="relative w-full overflow-hidden">
                         <img
                             className="h-full w-full"
-                            src="/images/section-images/person-getting-out-of-pool.png"
+                            src="/images/section-images/person-getting-out-of-pool.webp"
                             alt=""
                         />
                     </div>

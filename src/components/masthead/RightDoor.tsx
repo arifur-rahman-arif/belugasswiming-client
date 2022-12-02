@@ -11,7 +11,7 @@ const RightDoor = (): JSX.Element => {
                 autoPlay
                 muted
                 loop
-                poster="/images/masthead/masthead-home-bg.png"
+                poster="/images/masthead/masthead-home-bg.webp"
                 className="h-screen w-full object-cover"
             >
                 <source src="/videos/video-masthead-right.mp4" type="video/mp4" />

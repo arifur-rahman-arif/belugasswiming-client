@@ -1,8 +1,8 @@
 import { Container } from '@/components/container';
-import SwimmingIcon from '@/icons/icon-swiming-yellow.svg';
-import { MouseEvent } from 'react';
 import IconSwimming from '@/icons/icon-swimming-black-single-wave.svg';
 import IconSwimmingDoubleWave from '@/icons/icon-swimming-black.svg';
+import { MouseEvent } from 'react';
+import SwimmingIcon from '@/icons/icon-swiming-yellow.svg';
 import { forwardRef } from 'react';
 
 interface MapContainerPropsInterface {
@@ -26,7 +26,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                 <h3 className="mt-4 text-teal">We bring it to your home</h3>
             </div>
             <div className="grid place-items-center">
-                <img className="object-cover" src="/images/section-images/black-man-with-glass.png" alt="" />
+                <img className="object-cover" src="/images/section-images/black-man-with-glass.webp" alt="" />
             </div>
 
             <div
@@ -55,7 +55,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                     >
                         <div className="h-[19rem] w-full">
                             <img
-                                src="/images/section-images/location-ascot.png"
+                                src="/images/section-images/location-ascot.webp"
                                 alt="Ascot"
                                 className="h-full w-full"
                             />
@@ -70,11 +70,11 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 <p className="">At your residence or the swimming pool of your choice</p>
                                 <div className="flex items-start justify-start gap-[2.7rem] ">
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/mehdi-rounded.png" alt="" />
+                                        <img src="/images/section-images/mehdi-rounded.webp" alt="" />
                                         <span>Mehdi</span>
                                     </div>
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/jhon-rounded.png" alt="" />
+                                        <img src="/images/section-images/jhon-rounded.webp" alt="" />
                                         <span>Jhon</span>
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                     >
                         <div className="h-[19rem] w-full">
                             <img
-                                src="/images/section-images/location-windsor.png"
+                                src="/images/section-images/location-windsor.webp"
                                 alt="Ascot"
                                 className="h-full w-full"
                             />
@@ -121,11 +121,11 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 <p className="">At your residence or the swimming pool of your choice</p>
                                 <div className="flex items-start justify-start gap-[2.7rem] ">
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/mehdi-rounded.png" alt="" />
+                                        <img src="/images/section-images/mehdi-rounded.webp" alt="" />
                                         <span>Mehdi</span>
                                     </div>
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/jhon-rounded.png" alt="" />
+                                        <img src="/images/section-images/jhon-rounded.webp" alt="" />
                                         <span>Jhon</span>
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                     >
                         <div className="h-[19rem] w-full">
                             <img
-                                src="/images/section-images/location-holland.png"
+                                src="/images/section-images/location-holland.webp"
                                 alt="Ascot"
                                 className="h-full w-full"
                             />
@@ -172,11 +172,11 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 <p className="">At your residence or the swimming pool of your choice</p>
                                 <div className="flex items-start justify-start gap-[2.7rem] ">
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/mehdi-rounded.png" alt="" />
+                                        <img src="/images/section-images/mehdi-rounded.webp" alt="" />
                                         <span>Mehdi</span>
                                     </div>
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/jhon-rounded.png" alt="" />
+                                        <img src="/images/section-images/jhon-rounded.webp" alt="" />
                                         <span>Jhon</span>
                                     </div>
                                 </div>
@@ -208,7 +208,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                     >
                         <div className="h-[19rem] w-full">
                             <img
-                                src="/images/section-images/location-london.png"
+                                src="/images/section-images/location-london.webp"
                                 alt="Ascot"
                                 className="h-full w-full"
                             />
@@ -223,11 +223,11 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 <p className="">At your residence or the swimming pool of your choice</p>
                                 <div className="flex items-start justify-start gap-[2.7rem] ">
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/mehdi-rounded.png" alt="" />
+                                        <img src="/images/section-images/mehdi-rounded.webp" alt="" />
                                         <span>Mehdi</span>
                                     </div>
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/jhon-rounded.png" alt="" />
+                                        <img src="/images/section-images/jhon-rounded.webp" alt="" />
                                         <span>Jhon</span>
                                     </div>
                                 </div>

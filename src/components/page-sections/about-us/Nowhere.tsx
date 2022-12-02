@@ -27,7 +27,7 @@ const Nowhere = () => {
                         </span>
                     </div>
                     <div className="w-full">
-                        <img src="/images/section-images/blurry-image.png" alt="" className="h-full w-full" />
+                        <img src="/images/section-images/blurry-image.webp" alt="" className="h-full w-full" />
                     </div>
                 </div>
 

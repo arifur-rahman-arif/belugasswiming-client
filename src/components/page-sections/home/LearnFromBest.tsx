@@ -1,10 +1,11 @@
-import { Container } from '@/components/container';
-import { Section } from '@/components/section';
 import { AppContextInterface, AppCtx } from '@/context/Context';
-import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
 import { useContext, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+
+import { Container } from '@/components/container';
 import IconVideoPlay from '@/images/icons/video-play.svg';
+import { Section } from '@/components/section';
+import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
+import { gsap } from 'gsap';
 /**
  * Learn from best component
  *
@@ -69,7 +70,7 @@ const LearnFromBest = () => {
                     <div className="relative overflow-hidden">
                         <div className="relative">
                             <img
-                                src="/images/section-images/person-swimming-2.png"
+                                src="/images/section-images/person-swimming-2.webp"
                                 className="xl:min-h-[42.6rem]"
                                 ref={imgElement}
                             />

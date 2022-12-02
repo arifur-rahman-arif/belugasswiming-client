@@ -1,9 +1,10 @@
-import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
-import { Section } from '@/components/section';
-import { Container } from '@/components/container';
-import { useContext, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
 import { AppContextInterface, AppCtx } from '@/context/Context';
+import { useContext, useEffect, useRef } from 'react';
+
+import { Container } from '@/components/container';
+import { Section } from '@/components/section';
+import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
+import { gsap } from 'gsap';
 
 /**
  * Private swimming component
@@ -68,7 +69,7 @@ const PrivateSwiming = () => {
                     <span ref={yellowElement} className="h-0 w-[0.8rem] bg-primary"></span>
                     <div className="relative">
                         <img
-                            src="/images/section-images/person-swiming.png"
+                            src="/images/section-images/person-swiming.webp"
                             className="xl:min-h-[42.6rem]"
                             ref={imgElement}
                         />

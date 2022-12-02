@@ -1,12 +1,13 @@
-import { Section } from '@/components/section';
-import { useContext, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
 import { AppContextInterface, AppCtx } from '@/context/Context';
-import SunGlass from '@/images/icons/icon-sunglass-black.svg';
-import IconLinkedin from '@/images/icons/icon-linkedin-outline.svg';
+import { useContext, useEffect, useRef } from 'react';
+
+import { ContainerFluid } from '@/components/container';
 import IconFacebook from '@/images/icons/icon-facebook-outline.svg';
 import IconInstagram from '@/images/icons/icon-instagram-outline.svg';
-import { ContainerFluid } from '@/components/container';
+import IconLinkedin from '@/images/icons/icon-linkedin-outline.svg';
+import { Section } from '@/components/section';
+import SunGlass from '@/images/icons/icon-sunglass-black.svg';
+import { gsap } from 'gsap';
 
 /**
  * Mahdi section right sided component
@@ -140,7 +141,7 @@ const MehdiSection = (): JSX.Element => {
                         </div>
 
                         <div className="relative max-h-[52.7rem] max-w-[58.8rem] self-end md:ml-16 xl:ml-[7.5rem]">
-                            <img src="/images/section-images/mehdi.png" className="relative z-[2]" ref={imgElement} />
+                            <img src="/images/section-images/mehdi.webp" className="relative z-[2]" ref={imgElement} />
                             <span
                                 ref={sportElement}
                                 style={{ writingMode: 'vertical-lr', WebkitTextStroke: '1px #000' }}

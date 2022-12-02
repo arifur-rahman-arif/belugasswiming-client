@@ -35,9 +35,9 @@ const LeftDoor = (): JSX.Element => {
     }, []);
 
     return (
-        <div className="relative mx-auto mt-36 h-[calc(100%_-_9rem)] w-full bg-white bg-[url('/images/masthead/masthead-door-left.png')] bg-cover bg-center md:mt-0 md:h-auto">
+        <div className="relative mx-auto mt-36 h-[calc(100%_-_9rem)] w-full bg-white bg-[url('/images/masthead/masthead-door-left.webp')] bg-cover bg-center md:mt-0 md:h-auto">
             <div className="ml-auto h-full w-full md:max-w-[calc(var(--container-width)_/_2)]">
-                <div className="h-full bg-[url('/images/masthead/masthead-home-bg.png')] bg-cover bg-no-repeat px-8 pt-20 md:h-auto md:bg-none md:pt-[21rem] xl:px-0">
+                <div className="h-full bg-[url('/images/masthead/masthead-home-bg.webp')] bg-cover bg-no-repeat px-8 pt-20 md:h-auto md:bg-none md:pt-[21rem] xl:px-0">
                     <h1 className="text-teal">Private swimming lessons</h1>
 
                     <img src="/images/logos/swimright.svg" alt="swimright" className="mt-8" />

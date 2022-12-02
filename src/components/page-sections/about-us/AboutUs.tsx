@@ -1,9 +1,10 @@
-import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
-import { Section } from '@/components/section';
-import { ContainerFluid } from '@/components/container';
 import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+
+import { ContainerFluid } from '@/components/container';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { Section } from '@/components/section';
+import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
+import { gsap } from 'gsap';
 
 /**
  * Private swimming component
@@ -102,7 +103,7 @@ const AboutUs = () => {
                     ></span>
                     <div className="relative overflow-hidden md:overflow-visible">
                         <img
-                            src="/images/section-images/person-swimming-underwater.png"
+                            src="/images/section-images/person-swimming-underwater.webp"
                             className="relative translate-x-[7rem] opacity-0 md:-translate-x-0 xl:min-h-[46.7rem]"
                             ref={imgElement}
                         />

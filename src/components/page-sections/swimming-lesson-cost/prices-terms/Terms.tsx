@@ -157,7 +157,7 @@ const Terms = (): JSX.Element => {
                     >
                         <img
                             className="mx-auto object-contain"
-                            src="/images/section-images/swimming-tutorial.png"
+                            src="/images/section-images/swimming-tutorial.webp"
                             alt=""
                         />
                     </div>

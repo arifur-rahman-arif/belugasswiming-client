@@ -13,7 +13,7 @@ const MastheadContact = (): JSX.Element => {
 
     return (
         <>
-            <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-contact-mobile.png')] bg-cover bg-center bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:bg-[url('/images/masthead/masthead-contact.png')] md:bg-center md:pt-[13rem] 2xl:bg-[url('/images/masthead/masthead-contact-large.png')]">
+            <div className="masthead w-full overflow-hidden bg-[url('/images/masthead/masthead-contact-mobile.webp')] bg-cover bg-center bg-no-repeat md:absolute md:h-[75rem] md:-translate-y-[13rem] md:bg-[url('/images/masthead/masthead-contact.webp')] md:bg-center md:pt-[13rem] 2xl:bg-[url('/images/masthead/masthead-contact-large.webp')]">
                 <Container className="relative grid h-full grid-cols-1 grid-rows-[auto_auto_1fr] justify-items-start pt-[7.3rem]">
                     <h1 className="mt-4 text-teal">
                         We try to reply
