@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+
 import IconLeft from '@/images/icons/icon-angle-left.svg';
 import IconRight from '@/images/icons/icon-angle-right.svg';
 import SliderCard from './SliderCard';
@@ -13,7 +14,7 @@ let activeIndexes = [0, 1];
  * @returns {*}  {JSX.Element}
  */
 const SliderSection = (): JSX.Element => {
-    const sliderArray = [1, 2, 3, 4, 5, 6, 7, 8];
+    const sliderArray = [1, 2, 3, 4];
     const sliderContainer = useRef<HTMLDivElement>(null);
     const sliderWrapper = useRef<HTMLDivElement>(null);
     const [sliderIndex, setSliderIndex] = useState<number>(0);

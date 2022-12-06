@@ -108,7 +108,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                 </div>
 
                 {/* Item 2 */}
-                <div className="location-pin absolute -top-[10%] left-[30%] z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
+                <div className="location-pin absolute -top-[15%] left-[30%] z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
                     <IconSwimming />
                     <span className="uppercase">
                         SwimRight
@@ -177,7 +177,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                 </div>
 
                 {/* Item 3 */}
-                <div className="location-pin absolute -top-[15%] right-[30%] z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
+                <div className="location-pin absolute -top-[15%] right-[20%] z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
                     <IconSwimming />
                     <span className="uppercase">
                         Adult SwimRight At
@@ -228,24 +228,18 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                 </div>
 
                 {/* Item 4 */}
-                <div className="location-pin absolute top-[15%] right-[10%] z-[2] grid -translate-y-[100px] cursor-pointer grid-cols-[1fr_auto] content-center items-center justify-items-start gap-4 opacity-0">
-                    <IconSwimming />
-                    <span className="uppercase">
-                        SwimRight
-                        <br />
-                        at home
-                    </span>
+                <div className="location-pin absolute top-[15%] left-2/4 z-[2] grid -translate-y-[100px] -translate-x-2/4 cursor-pointer grid-cols-1 content-center items-center justify-items-start gap-4 opacity-0">
                     <span
                         className="col-span-2 justify-self-center"
                         onMouseEnter={(e) => toggleMapLocation(e, 'item-4')}
                         onMouseLeave={(e) => closeMapLocation(e, 'item-4')}
                     >
                         <img
-                            src="/images/icons/icon-location-pin-yellow.svg"
+                            src="/images/icons/icon-location-pin-blue.svg"
                             className="w-full"
                             alt=""
-                            height={82}
-                            width={53}
+                            width={255}
+                            height={243}
                         />
                     </span>
 
@@ -273,11 +267,21 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                 <p className="">At your residence or the swimming pool of your choice</p>
                                 <div className="flex items-start justify-start gap-[2.7rem] ">
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/mehdi-rounded.webp" alt="" height={82} />
+                                        <img
+                                            src="/images/section-images/mehdi-rounded.webp"
+                                            alt=""
+                                            width={80}
+                                            height={80}
+                                        />
                                         <span>Mehdi</span>
                                     </div>
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
-                                        <img src="/images/section-images/jhon-rounded.webp" alt="" width={53} />
+                                        <img
+                                            src="/images/section-images/jhon-rounded.webp"
+                                            alt=""
+                                            width={80}
+                                            height={80}
+                                        />
                                         <span>Jhon</span>
                                     </div>
                                 </div>

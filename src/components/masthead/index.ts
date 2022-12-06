@@ -1,6 +1,7 @@
-import MastheadAboutUs from './MastheadAboutUs';
-import MastheadSwimmingLesson from './MastheadSwimmingLesson';
 import MastHead from './MastHead';
+import MastheadAboutUs from './MastheadAboutUs';
 import MastheadContact from './MastheadContact';
+import MastheadPrivacyPolicy from './MastheadPrivacyPolicy';
+import MastheadSwimmingLesson from './MastheadSwimmingLesson';
 
-export { MastHead, MastheadAboutUs, MastheadSwimmingLesson, MastheadContact };
+export { MastheadPrivacyPolicy, MastHead, MastheadAboutUs, MastheadSwimmingLesson, MastheadContact };

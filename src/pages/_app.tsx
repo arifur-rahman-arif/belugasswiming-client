@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app';
 import Context from '../context/Context';
 import Head from 'next/head';
 import MainLayout from '../layouts/MainLayout';
+import NoNavigationLayout from '../layouts/NoNavigationLayout';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap';
 import { useEffect } from 'react';
@@ -14,9 +15,19 @@ import { useEffect } from 'react';
  *
  * @export
  * @param {AppProps} { Component, pageProps }
- * @returns {*}
+ * @returns {*}  {JSX.Element}
  */
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps): JSX.Element {
+    const navLayouts = {
+        mainLayout: MainLayout,
+        noNavigationLayout: NoNavigationLayout
+    };
+
+    // @ts-ignore
+    const layout: any = Component.layout ? Component.layout : 'mainLayout';
+    // @ts-ignore
+    const PageLayout = navLayouts[layout] || ((children) => <>{children}</>);
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             gsap.registerPlugin(ScrollTrigger);
@@ -26,12 +37,12 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
-                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+                <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
             </Head>
             <Context>
-                <MainLayout>
+                <PageLayout>
                     <Component {...pageProps} />
-                </MainLayout>
+                </PageLayout>
             </Context>
         </>
     );
