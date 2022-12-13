@@ -19,7 +19,7 @@ interface MapContainerPropsInterface {
  */
 const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapContainerPropsInterface, ref: any) => {
     return (
-        <Container className="grid grid-cols-1 items-center bg-[url('/images/section-images/map.svg')] bg-contain bg-bottom bg-no-repeat sm:bg-[90%_auto] md:grid-cols-2 lg:bg-[70%_auto] xl:bg-none">
+        <Container className="grid grid-cols-1 items-center bg-[url('/images/section-images/map.png')] bg-contain bg-bottom bg-no-repeat sm:bg-[90%_auto] md:grid-cols-2 lg:bg-[70%_auto] xl:bg-none">
             <div>
                 <SwimmingIcon className="max-h-[3.7rem] max-w-[5.1rem]" />
                 <h2 className="mt-12 max-w-[38.8rem]">Locations</h2>

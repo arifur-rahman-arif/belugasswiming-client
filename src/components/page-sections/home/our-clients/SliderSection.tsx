@@ -2,11 +2,30 @@ import { useEffect, useRef, useState } from 'react';
 
 import IconLeft from '@/images/icons/icon-angle-left.svg';
 import IconRight from '@/images/icons/icon-angle-right.svg';
-import SliderCard from './SliderCard';
+import SliderCard, { SliderCardInterface } from './SliderCard';
 import { gsap } from 'gsap';
 
 let sliderPosition = 0;
 let activeIndexes = [0, 1];
+
+const sliderList: SliderCardInterface[] = [
+    {
+        name: 'Nasma Alahmar',
+        description: `Mehdi is the best instructor ever .He is the best coach in the UK as well he is so kind and gentle with the kids. He doesn’t let them go until they are champions 🏊‍♂️🏊‍♂️`
+    },
+    {
+        name: 'Giancarlo Urselli',
+        description: `Great teacher and very nice atmosphere. Would 100% recommend!!`
+    },
+    {
+        name: 'Bahareh Khezr',
+        description: `Great teacher and very nice atmosphere. Would 100% recommend!!`
+    },
+    {
+        name: 'AV',
+        description: `My 3 sons have gone through swimming classes with Mehdi and turned into a fully fledged athletes...`
+    }
+];
 
 /**
  * Horizontal slider component
@@ -14,7 +33,6 @@ let activeIndexes = [0, 1];
  * @returns {*}  {JSX.Element}
  */
 const SliderSection = (): JSX.Element => {
-    const sliderArray = [1, 2, 3, 4];
     const sliderContainer = useRef<HTMLDivElement>(null);
     const sliderWrapper = useRef<HTMLDivElement>(null);
     const [sliderIndex, setSliderIndex] = useState<number>(0);
@@ -29,10 +47,10 @@ const SliderSection = (): JSX.Element => {
     const slideLeft = () => {
         const containerWidth = sliderContainerWidth || sliderContainer.current?.clientWidth;
 
-        if (sliderIndex >= sliderArray.length - 2) return;
+        if (sliderIndex >= sliderList.length - 2) return;
         if (!containerWidth) return;
 
-        if (sliderArray.length - sliderIndex == 3) {
+        if (sliderList.length - sliderIndex == 3) {
             sliderPosition -= containerWidth / 1.5;
             setSliderReachedEndPosition(true);
         } else {
@@ -95,11 +113,11 @@ const SliderSection = (): JSX.Element => {
                 ref={sliderWrapper}
                 className="relative grid h-full w-full grid-flow-col gap-12"
                 style={{
-                    gridTemplateColumns: `repeat(${sliderArray.length}, ${sliderContainerWidth / 2 - 15}px)`
+                    gridTemplateColumns: `repeat(${sliderList.length}, ${sliderContainerWidth / 2 - 15}px)`
                 }}
             >
-                {sliderArray.map((item, index) => (
-                    <SliderCard key={index} index={index} />
+                {sliderList.map((slider, index) => (
+                    <SliderCard key={index} name={slider.name} description={slider.description} />
                 ))}
             </div>
 
@@ -114,7 +132,7 @@ const SliderSection = (): JSX.Element => {
                 <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">01</span>
 
                 <div className="flex items-center justify-center gap-4">
-                    {sliderArray.map((item, index) => (
+                    {sliderList.map((item, index) => (
                         <div
                             key={index}
                             className={`h-[0.4rem] w-[2rem] transition-all duration-500 ${
@@ -125,7 +143,7 @@ const SliderSection = (): JSX.Element => {
                 </div>
 
                 <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">
-                    {sliderArray.length.toString().padStart(2, '0')}
+                    {sliderList.length.toString().padStart(2, '0')}
                 </span>
 
                 <span

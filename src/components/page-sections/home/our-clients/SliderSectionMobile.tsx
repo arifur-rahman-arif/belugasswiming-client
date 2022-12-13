@@ -1,10 +1,29 @@
 import { useEffect, useRef, useState } from 'react';
 import IconLeft from '@/images/icons/icon-angle-left.svg';
 import IconRight from '@/images/icons/icon-angle-right.svg';
-import SliderCard from './SliderCard';
+import SliderCard, { SliderCardInterface } from './SliderCard';
 import { gsap } from 'gsap';
 
 let sliderPosition = 0;
+
+const sliderList: SliderCardInterface[] = [
+    {
+        name: 'Nasma Alahmar',
+        description: `Mehdi is the best instructor ever .He is the best coach in the UK as well he is so kind and gentle with the kids. He doesn’t let them go until they are champions 🏊‍♂️🏊‍♂️`
+    },
+    {
+        name: 'Giancarlo Urselli',
+        description: `Great teacher and very nice atmosphere. Would 100% recommend!!`
+    },
+    {
+        name: 'Bahareh Khezr',
+        description: `Great teacher and very nice atmosphere. Would 100% recommend!!`
+    },
+    {
+        name: 'AV',
+        description: `My 3 sons have gone through swimming classes with Mehdi and turned into a fully fledged athletes...`
+    }
+];
 
 /**
  * Horizontal slider for mobile devices
@@ -12,7 +31,6 @@ let sliderPosition = 0;
  * @returns {*}  {JSX.Element}
  */
 const SliderSectionMobile = (): JSX.Element => {
-    const sliderArray = [1, 2, 3, 4, 5];
     const sliderContainer = useRef<HTMLDivElement>(null);
     const sliderWrapper = useRef<HTMLDivElement>(null);
     const [sliderIndex, setSliderIndex] = useState<number>(0);
@@ -26,7 +44,7 @@ const SliderSectionMobile = (): JSX.Element => {
     const slideLeft = () => {
         const containerWidth = sliderContainerWidth || sliderContainer.current?.clientWidth;
 
-        if (sliderIndex >= sliderArray.length - 1) return;
+        if (sliderIndex >= sliderList.length - 1) return;
         if (!containerWidth) return;
 
         sliderPosition -= sliderContainerWidth - 40 + 30;
@@ -76,11 +94,11 @@ const SliderSectionMobile = (): JSX.Element => {
                 ref={sliderWrapper}
                 className="relative grid h-full w-full grid-flow-col gap-12"
                 style={{
-                    gridTemplateColumns: `repeat(${sliderArray.length}, ${sliderContainerWidth - 40}px)`
+                    gridTemplateColumns: `repeat(${sliderList.length}, ${sliderContainerWidth - 40}px)`
                 }}
             >
-                {sliderArray.map((item, index) => (
-                    <SliderCard key={index} index={index} />
+                {sliderList.map((slider, index) => (
+                    <SliderCard key={index} name={slider.name} description={slider.description} />
                 ))}
             </div>
 
@@ -95,7 +113,7 @@ const SliderSectionMobile = (): JSX.Element => {
                 <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">01</span>
 
                 <div className="flex items-center justify-center gap-4">
-                    {sliderArray.map((item, index) => (
+                    {sliderList.map((item, index) => (
                         <div
                             key={index}
                             className={`h-[0.4rem] w-[2rem] transition-all duration-500 ${
@@ -106,7 +124,7 @@ const SliderSectionMobile = (): JSX.Element => {
                 </div>
 
                 <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">
-                    {sliderArray.length.toString().padStart(2, '0')}
+                    {sliderList.length.toString().padStart(2, '0')}
                 </span>
 
                 <span
