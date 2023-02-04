@@ -11,7 +11,7 @@ const Description = (): JSX.Element => {
 
     return (
         <div className="flex h-full flex-col items-start justify-start gap-4 self-end">
-            <strong className="text-[1.4rem] font-bold leading-[1.6rem]">Description of the pool</strong>
+            <strong className="text-[1.4rem] font-bold leading-[1.6rem]">Message</strong>
             <textarea
                 onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
                     appCtx?.setContactDescription(e.target.value as string)

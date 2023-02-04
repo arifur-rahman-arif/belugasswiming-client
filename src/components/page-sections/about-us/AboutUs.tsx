@@ -112,7 +112,7 @@ const AboutUs = () => {
                     </div>
                     <span
                         style={{ WebkitTextStroke: '1px #000' }}
-                        className="absolute bottom-0 left-0 z-[1] mb-12 overflow-hidden text-center text-[calc(2vmax_+_1rem)] capitalize leading-[4rem] text-transparent md:text-[4rem] md:leading-[7rem] xl:ml-[calc(7rem_+_5.7rem)]"
+                        className="absolute bottom-0 left-0 z-[1] overflow-hidden pl-4 text-center text-[calc(2vmax_+_1rem)] capitalize leading-[4rem] text-transparent md:mb-12 md:pl-0 md:text-[4rem] md:leading-[7rem] xl:ml-[calc(7rem_+_5.7rem)]"
                     >
                         Swimming is in our DNA
                     </span>

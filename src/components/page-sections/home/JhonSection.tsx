@@ -1,13 +1,9 @@
-import { AppContextInterface, AppCtx } from '@/context/Context';
-import { useContext, useEffect, useRef } from 'react';
-
 import { ContainerFluid } from '@/components/container';
-import IconFacebook from '@/images/icons/icon-facebook-outline.svg';
-import IconInstagram from '@/images/icons/icon-instagram-outline.svg';
-import IconLinkedin from '@/images/icons/icon-linkedin-outline.svg';
 import { Section } from '@/components/section';
+import { AppContextInterface, AppCtx } from '@/context/Context';
 import SunGlass from '@/images/icons/icon-sunglass-black.svg';
 import { gsap } from 'gsap';
+import { useContext, useEffect, useRef } from 'react';
 
 /**
  * Jhon section component
@@ -162,7 +158,7 @@ const JhonSection = (): JSX.Element => {
                             >
                                 Splash on
                             </span>
-                            <div
+                            {/* <div
                                 ref={socialElement}
                                 className="absolute top-2/4 right-0 z-[3] grid h-0 -translate-x-2/4 grid-cols-1 items-start justify-items-center gap-8 overflow-hidden"
                             >
@@ -175,7 +171,7 @@ const JhonSection = (): JSX.Element => {
                                 <a href="#">
                                     <IconInstagram className="max-h-[2.4rem] max-w-[2.4rem]" />
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

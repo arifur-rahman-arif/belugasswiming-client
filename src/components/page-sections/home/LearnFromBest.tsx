@@ -1,11 +1,10 @@
-import { AppContextInterface, AppCtx } from '@/context/Context';
-import { useContext, useEffect, useRef } from 'react';
-
 import { Container } from '@/components/container';
-import IconVideoPlay from '@/images/icons/video-play.svg';
 import { Section } from '@/components/section';
+import VideoPlayer from '@/components/video-player/VideoPlayer';
+import { AppContextInterface, AppCtx } from '@/context/Context';
 import SwimmingIcon from '@/images/icons/icon-swiming-yellow.svg';
 import { gsap } from 'gsap';
+import { useContext, useEffect, useRef } from 'react';
 
 /**
  * Learn from best component
@@ -14,7 +13,7 @@ import { gsap } from 'gsap';
  */
 const LearnFromBest = () => {
     const appCtx: AppContextInterface | null = useContext(AppCtx);
-    const imgElement = useRef<HTMLImageElement>(null);
+    const imgElement = useRef<HTMLDivElement | null>(null);
     const yellowElement = useRef<HTMLDivElement>(null);
     const spanElement = useRef<HTMLDivElement>(null);
 
@@ -68,9 +67,9 @@ const LearnFromBest = () => {
 
                 <div className="flex flex-row-reverse items-start justify-start">
                     <span ref={yellowElement} className="h-0 w-[0.8rem] bg-primary"></span>
-                    <div className="relative overflow-hidden">
-                        <div className="relative">
-                            <img
+                    <div className="relative overflow-hidden" ref={imgElement}>
+                        <div className="relative shadow-shadow1">
+                            {/* <img
                                 src="/images/section-images/person-swimming-2.webp"
                                 className="xl:min-h-[42.6rem]"
                                 ref={imgElement}
@@ -80,11 +79,15 @@ const LearnFromBest = () => {
                             />
                             <span className="absolute right-[12.9rem] bottom-[4.3rem] z-[2] grid h-[6.5rem] w-[6.5rem] cursor-pointer place-items-center rounded-full bg-primary">
                                 <IconVideoPlay className="translate-x-[0.2rem]" />
-                            </span>
+                            </span> */}
+                            <VideoPlayer
+                                videoUrl="/videos/individual-medley-event.mp4"
+                                videoPoster="/images/section-images/individual-medley-event-poster.jpg"
+                            />
                         </div>
                         <span
                             ref={spanElement}
-                            className="relative -z-[1] mt-[1.5rem] block -translate-y-[200%] text-left text-[2.4rem] uppercase leading-[2.88rem] text-headingColor opacity-0"
+                            className="relative -z-[1] mt-8 block -translate-y-[200%] text-left text-[2.4rem] uppercase leading-[2.88rem] text-headingColor opacity-0"
                         >
                             individual medley event
                         </span>

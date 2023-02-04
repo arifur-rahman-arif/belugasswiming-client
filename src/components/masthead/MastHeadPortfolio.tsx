@@ -64,7 +64,7 @@ const MastHeadPortfolio = (): JSX.Element => {
 
                     <div className="flex flex-col items-start justify-start gap-[1.5rem] justify-self-end pb-24 pt-24 md:pt-0">
                         <img
-                            src="/images/logos/logo-bsa.svg"
+                            src="/images/logos/logo-bsa.png"
                             alt="BSA"
                             className="max-h-[5.3rem] max-w-[13rem] xl:max-w-[15.2rem]"
                             width={152}

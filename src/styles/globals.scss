@@ -241,3 +241,35 @@ body {
         }
     }
 }
+
+.plyr__control svg {
+    fill: #ffffff !important;
+    opacity: 0.9;
+
+    &:hover {
+        fill: var(--color-secondary) !important;
+    }
+}
+
+.plyr__control {
+    &:hover {
+        svg {
+            fill: var(--color-secondary) !important;
+        }
+    }
+}
+
+.plyr__time {
+    color: #ffffff;
+    font-family: var(--font-lato-bold);
+}
+
+.plyr {
+    * {
+        font-family: var(--font-lato-bold);
+    }
+}
+
+.plyr__poster {
+    background-size: cover !important;
+}

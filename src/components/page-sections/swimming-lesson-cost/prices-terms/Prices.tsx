@@ -7,7 +7,7 @@ import IconPurse from '@/icons/icon-purse.svg';
 import IconSwimmingLarge from '@/icons/icon-swimming-large.svg';
 import IconTimer from '@/icons/icon-timer.svg';
 import Link from 'next/link';
-import PeopleSwimming from '@/icons/icon-3-people-swimming.svg';
+// Import PeopleSwimming from '@/icons/icon-3-people-swimming.svg';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Section } from '@/components/section';
 import SwimmingIcon from '@/icons/icon-swiming-yellow.svg';
@@ -29,10 +29,10 @@ const sliders = [
                 <span className="font-medium leading-[1.9rem] text-secondary">60min</span>
                 <IconPurse />
                 <span className="flex items-center justify-start gap-8 font-medium leading-[1.9rem] text-secondary">
-                    <span className="font-medium leading-[1.9rem] text-grey60 line-through decoration-grey60">
+                    {/* <span className="font-medium leading-[1.9rem] text-grey60 line-through decoration-grey60">
                         £120
-                    </span>
-                    <span className="font-medium leading-[1.9rem] text-secondary">£90</span>
+                    </span> */}
+                    <span className="font-medium leading-[1.9rem] text-secondary">£120</span>
                 </span>
             </div>
 
@@ -53,7 +53,7 @@ const sliders = [
         <div className="flex flex-col items-center justify-start bg-white p-12 shadow-shadow1 xl:px-[6rem] xl:pt-[5rem] xl:pb-[4.5rem]">
             <IconDoubleSwimmingLarge />
             <strong className="mt-[1.5rem] text-left text-[2rem] font-bold leading-[2.4rem] text-headingColor">
-                One to one session
+                Home swimming
             </strong>
 
             <div className="mt-16 grid grid-cols-[auto_1fr] gap-x-4 gap-y-[1.5rem]">
@@ -61,36 +61,7 @@ const sliders = [
                 <span className="font-medium leading-[1.9rem] text-secondary">30min</span>
                 <IconPurse />
                 <span className="flex items-center justify-start gap-8 font-medium leading-[1.9rem] text-secondary">
-                    £75
-                </span>
-            </div>
-
-            <Link href="/contact-swimming-instructor/">
-                <button
-                    type="button"
-                    className="mt-24 cursor-pointer rounded-[1.5rem] border-2 border-primary bg-primary px-8 py-6 text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-transparent md:py-[1.8rem] md:px-[2.4rem]"
-                >
-                    Request a call back
-                </button>
-            </Link>
-        </div>
-    </div>,
-    // Item 3
-    <div className="grid h-full w-full grid-cols-[auto_1fr]">
-        <span className="h-[15rem] w-[0.8rem] bg-primary"></span>
-
-        <div className="flex flex-col items-center justify-start bg-white p-12 shadow-shadow1 xl:px-[6rem] xl:pt-[5rem] xl:pb-[4.5rem]">
-            <PeopleSwimming />
-            <strong className="mt-[1.5rem] text-left text-[2rem] font-bold leading-[2.4rem] text-headingColor">
-                Two to one session
-            </strong>
-
-            <div className="mt-16 grid grid-cols-[auto_1fr] gap-x-4 gap-y-[1.5rem]">
-                <IconTimer />
-                <span className="font-medium leading-[1.9rem] text-secondary">30min</span>
-                <IconPurse />
-                <span className="flex items-center justify-start gap-8 font-medium leading-[1.9rem] text-secondary">
-                    £40
+                    £70
                 </span>
             </div>
 
@@ -104,6 +75,35 @@ const sliders = [
             </Link>
         </div>
     </div>
+    // Item 3
+    // <div className="grid h-full w-full grid-cols-[auto_1fr]">
+    //     <span className="h-[15rem] w-[0.8rem] bg-primary"></span>
+
+    //     <div className="flex flex-col items-center justify-start bg-white p-12 shadow-shadow1 xl:px-[6rem] xl:pt-[5rem] xl:pb-[4.5rem]">
+    //         <PeopleSwimming />
+    //         <strong className="mt-[1.5rem] text-left text-[2rem] font-bold leading-[2.4rem] text-headingColor">
+    //             Two to one session
+    //         </strong>
+
+    //         <div className="mt-16 grid grid-cols-[auto_1fr] gap-x-4 gap-y-[1.5rem]">
+    //             <IconTimer />
+    //             <span className="font-medium leading-[1.9rem] text-secondary">30min</span>
+    //             <IconPurse />
+    //             <span className="flex items-center justify-start gap-8 font-medium leading-[1.9rem] text-secondary">
+    //                 £40
+    //             </span>
+    //         </div>
+
+    //         <Link href="/contact-swimming-instructor/">
+    //             <button
+    //                 type="button"
+    //                 className="mt-24 cursor-pointer rounded-[1.5rem] border-2 border-primary bg-primary px-8 py-6 text-[1.6rem] font-bold uppercase leading-8 text-secondary transition-all hover:bg-transparent md:py-[1.8rem] md:px-[2.4rem]"
+    //             >
+    //                 Request a call back
+    //             </button>
+    //         </Link>
+    //     </div>
+    // </div>
 ];
 
 /**

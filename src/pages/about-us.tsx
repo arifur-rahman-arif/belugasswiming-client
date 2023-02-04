@@ -1,7 +1,7 @@
 import { LocationMap } from '@/components/Location';
 import { MastheadAboutUs } from '@/components/masthead';
 import Page from '@/components/Page';
-import { FormSection, OurClientsSection } from '@/components/page-sections/home';
+import { FormSection, JhonSection, MehdiSection, OurClientsSection } from '@/components/page-sections/home';
 import { AboutUs, Nowhere } from '@/page-sections/about-us';
 
 /**
@@ -18,6 +18,9 @@ const aboutUs = (): any => {
             <MastheadAboutUs />
             <AboutUs />
             <Nowhere />
+            <div className="mt-[20rem] w-full sm:mt-[22rem] md:mt-[30rem]"></div>
+            <MehdiSection />
+            <JhonSection />
             <LocationMap sectionClass="md:mt-[23.4rem]" />
             <OurClientsSection sectionTitle="Clients words" description="Of our clients" />
             <FormSection />

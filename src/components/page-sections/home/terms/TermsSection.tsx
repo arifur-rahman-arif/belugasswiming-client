@@ -18,7 +18,7 @@ const sliders = [
             className={`flex flex-col items-start justify-start bg-grey20 p-12 shadow-shadow1 xl:py-[8.5rem] xl:px-[6.7rem]`}
         >
             <strong className="text-left text-[2rem] font-bold leading-[2.4rem] text-headingColor">
-                Sprint term 2023
+                Spring term 2023
             </strong>
             <span className="mt-4 text-left text-[1.6rem] font-bold uppercase leading-[1.8rem]">All levels</span>
 
@@ -37,7 +37,7 @@ const sliders = [
                     <IconSwimming className="max-h-[2.4rem] max-w-[2.4rem]" />
                     <span className="font-medium leading-[1.9rem] text-secondary">Trainer's</span>
                     <span className="col-span-1 col-start-2 font-medium leading-[1.9rem] text-secondary">
-                        Mehdi | Jhon
+                        Mehdi | John
                     </span>
                 </div>
             </div>
@@ -70,7 +70,7 @@ const sliders = [
                     <IconSwimming className="max-h-[2.4rem] max-w-[2.4rem]" />
                     <span className="font-medium leading-[1.9rem] text-secondary">Trainer</span>
                     <span className="col-span-1 col-start-2 font-medium leading-[1.9rem] text-secondary">
-                        Mehdi | Jhon
+                        Mehdi | John
                     </span>
                 </div>
             </div>

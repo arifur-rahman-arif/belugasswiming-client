@@ -1,29 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
 import IconLeft from '@/images/icons/icon-angle-left.svg';
 import IconRight from '@/images/icons/icon-angle-right.svg';
-import SliderCard, { SliderCardInterface } from './SliderCard';
 import { gsap } from 'gsap';
+import { useEffect, useRef, useState } from 'react';
+
+import SliderCard from './SliderCard';
+import { sliderList } from './sliderList';
 
 let sliderPosition = 0;
-
-const sliderList: SliderCardInterface[] = [
-    {
-        name: 'Nasma Alahmar',
-        description: `Mehdi is the best instructor ever .He is the best coach in the UK as well he is so kind and gentle with the kids. He doesn’t let them go until they are champions 🏊‍♂️🏊‍♂️`
-    },
-    {
-        name: 'Giancarlo Urselli',
-        description: `Great teacher and very nice atmosphere. Would 100% recommend!!`
-    },
-    {
-        name: 'Bahareh Khezr',
-        description: `Great teacher and very nice atmosphere. Would 100% recommend!!`
-    },
-    {
-        name: 'AV',
-        description: `My 3 sons have gone through swimming classes with Mehdi and turned into a fully fledged athletes...`
-    }
-];
 
 /**
  * Horizontal slider for mobile devices
@@ -98,11 +81,11 @@ const SliderSectionMobile = (): JSX.Element => {
                 }}
             >
                 {sliderList.map((slider, index) => (
-                    <SliderCard key={index} name={slider.name} description={slider.description} />
+                    <SliderCard key={index} {...slider} />
                 ))}
             </div>
 
-            <div className="flex items-center justify-center gap-[1.5rem] overflow-x-scroll pl-16">
+            <div className="flex items-center justify-center gap-[1.5rem] overflow-x-scroll">
                 <span
                     onClick={slideRight}
                     className="cursor-pointer p-4 transition-all hover:scale-[1.3] hover:bg-grey20"
@@ -110,8 +93,8 @@ const SliderSectionMobile = (): JSX.Element => {
                     <IconLeft />
                 </span>
 
-                <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">01</span>
-
+                <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">0{sliderIndex + 1}</span>
+                {/*
                 <div className="flex items-center justify-center gap-4">
                     {sliderList.map((item, index) => (
                         <div
@@ -121,7 +104,8 @@ const SliderSectionMobile = (): JSX.Element => {
                             }`}
                         ></div>
                     ))}
-                </div>
+                </div> */}
+                <span className="text-[1.8rem] font-bold">/</span>
 
                 <span className="text-[1.6rem] font-bold leading-[1.8rem] text-black">
                     {sliderList.length.toString().padStart(2, '0')}

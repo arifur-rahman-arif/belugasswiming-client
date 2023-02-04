@@ -1,31 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
-
 import IconLeft from '@/images/icons/icon-angle-left.svg';
 import IconRight from '@/images/icons/icon-angle-right.svg';
-import SliderCard, { SliderCardInterface } from './SliderCard';
 import { gsap } from 'gsap';
+import { useEffect, useRef, useState } from 'react';
+
+import SliderCard from './SliderCard';
+import { sliderList } from './sliderList';
 
 let sliderPosition = 0;
 let activeIndexes = [0, 1];
-
-const sliderList: SliderCardInterface[] = [
-    {
-        name: 'Nasma Alahmar',
-        description: `Mehdi is the best instructor ever .He is the best coach in the UK as well he is so kind and gentle with the kids. He doesn’t let them go until they are champions 🏊‍♂️🏊‍♂️`
-    },
-    {
-        name: 'Giancarlo Urselli',
-        description: `Great teacher and very nice atmosphere. Would 100% recommend!!`
-    },
-    {
-        name: 'Bahareh Khezr',
-        description: `Great teacher and very nice atmosphere. Would 100% recommend!!`
-    },
-    {
-        name: 'AV',
-        description: `My 3 sons have gone through swimming classes with Mehdi and turned into a fully fledged athletes...`
-    }
-];
 
 /**
  * Horizontal slider component
@@ -117,7 +99,7 @@ const SliderSection = (): JSX.Element => {
                 }}
             >
                 {sliderList.map((slider, index) => (
-                    <SliderCard key={index} name={slider.name} description={slider.description} />
+                    <SliderCard key={index} {...slider} />
                 ))}
             </div>
 

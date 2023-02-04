@@ -1,13 +1,9 @@
-import { AppContextInterface, AppCtx } from '@/context/Context';
-import { useContext, useEffect, useRef } from 'react';
-
 import { ContainerFluid } from '@/components/container';
-import IconFacebook from '@/images/icons/icon-facebook-outline.svg';
-import IconInstagram from '@/images/icons/icon-instagram-outline.svg';
-import IconLinkedin from '@/images/icons/icon-linkedin-outline.svg';
 import { Section } from '@/components/section';
+import { AppContextInterface, AppCtx } from '@/context/Context';
 import SunGlass from '@/images/icons/icon-sunglass-black.svg';
 import { gsap } from 'gsap';
+import { useContext, useEffect, useRef } from 'react';
 
 /**
  * Mahdi section right sided component
@@ -91,7 +87,7 @@ const MehdiSection = (): JSX.Element => {
                         <p className="text-secondary">
                             In 2005-2007, he was invited to play for the Polytechnic London team in the UK national
                             league and the Ealing club in the London league. During this time, Mehdi worked as a
-                            swimming coach for the Ealing Club and as a fitness instructor for Virgin Active.
+                            swimming coach for the Ealing Club and as a swimming instructor for Virgin Active.
                         </p>
                         <p className="text-secondary">
                             Mehdi moved to Dubai in 2007 and founded the Dubai Waterpolo and Swimming Club with his
@@ -156,7 +152,7 @@ const MehdiSection = (): JSX.Element => {
                             >
                                 Splash on
                             </span>
-                            <div
+                            {/* <div
                                 ref={socialElement}
                                 className="absolute top-2/4 right-0 z-[3] grid h-0 -translate-x-2/4 grid-cols-1 items-start justify-items-center gap-8 overflow-hidden"
                             >
@@ -169,7 +165,7 @@ const MehdiSection = (): JSX.Element => {
                                 <a href="#">
                                     <IconInstagram className="max-h-[2.4rem] max-w-[2.4rem]" />
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
