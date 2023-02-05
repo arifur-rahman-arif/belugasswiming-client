@@ -108,7 +108,7 @@ const sliders = [
                     <IconSwimming className="max-h-[2.4rem] max-w-[2.4rem]" />
                     <span className="font-medium leading-[1.9rem] text-secondary">Trainer</span>
                     <span className="col-span-1 col-start-2 font-medium leading-[1.9rem] text-secondary">
-                        Mehdi | Jhon
+                        Mehdi | John
                     </span>
                 </div>
             </div>

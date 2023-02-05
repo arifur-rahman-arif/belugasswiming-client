@@ -19,7 +19,7 @@ const Description = (): JSX.Element => {
                 className={`h-full w-full resize-none rounded-[1.5rem] border border-grey40 px-[1.6rem] py-[1.2rem] outline-none transition-all focus:border-teal ${
                     appCtx?.formSubmitted && 'cursor-not-allowed opacity-50'
                 }`}
-                placeholder="Length x Width x Depth"
+                placeholder="Type your message here"
                 value={appCtx?.contactDescription}
                 disabled={appCtx?.formSubmitted}
             ></textarea>

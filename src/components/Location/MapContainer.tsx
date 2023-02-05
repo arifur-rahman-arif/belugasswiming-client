@@ -99,7 +99,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                             width={80}
                                             height={80}
                                         />
-                                        <span>Jhon</span>
+                                        <span>John</span>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +168,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                             width={80}
                                             height={80}
                                         />
-                                        <span>Jhon</span>
+                                        <span>John</span>
                                     </div>
                                 </div>
                             </div>
@@ -219,7 +219,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                     </div>
                                     <div className="grid grid-cols-1 items-start justify-items-center gap-4">
                                         <img src="/images/section-images/jhon-rounded.webp" alt="" />
-                                        <span>Jhon</span>
+                                        <span>John</span>
                                     </div>
                                 </div>
                             </div>
@@ -282,7 +282,7 @@ const MapContainer = forwardRef(({ toggleMapLocation, closeMapLocation }: MapCon
                                             width={80}
                                             height={80}
                                         />
-                                        <span>Jhon</span>
+                                        <span>John</span>
                                     </div>
                                 </div>
                             </div>
